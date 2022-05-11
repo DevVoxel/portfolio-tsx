@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project will be using custom made compenents for important part of the potfolio.  I want to turn this into a repo that beginner developers can use to help with their own Potfolio Projects.  This will be the aim after I finish my own.
 
 ## Getting Started
 
