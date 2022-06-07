@@ -1,23 +1,22 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import { ChakraProvider } from '@chakra-ui/react'
-import { extendTheme } from '@chakra-ui/react'
+import Head from "next/head";
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
+import type { AppProps } from "next/app";
 
-const colors = {
-  brand: {
-    900: '#1a365d',
-    800: '#153e75',
-    700: '#2a69ac',
-  },
+import customTheme from "../styles/theme";
+
+function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+  return (
+    <>
+      <Head>
+        <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+      </Head>
+      <ColorModeScript initialColorMode={customTheme.config.initialColorMode} />
+      <ChakraProvider theme={customTheme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
+    </>
+  );
 }
 
-const theme = extendTheme({colors})
-
-function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
-)}
-
-export default MyApp
+export default App;
