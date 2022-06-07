@@ -1191,6 +1191,11 @@
     "@types/keygrip" "*"
     "@types/node" "*"
 
+"@types/dateformat@^5.0.0":
+  "integrity" "sha512-SZg4JdHIWHQGEokbYGZSDvo5wA4TLYPXaqhigs/wH+REDOejcJzgH+qyY+HtEUtWOZxEUkbhbdYPqQDiEgrXeA=="
+  "resolved" "https://registry.npmjs.org/@types/dateformat/-/dateformat-5.0.0.tgz"
+  "version" "5.0.0"
+
 "@types/debug@^4.0.0":
   "integrity" "sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg=="
   "resolved" "https://registry.npmjs.org/@types/debug/-/debug-4.1.7.tgz"
