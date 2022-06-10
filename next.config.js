@@ -49,6 +49,11 @@ const nextConfig = {
         destination: 'https://www.linkedin.com/in/aidensmithdev/',
         permanent: true,
       },
+      {
+        source: '/stackoverflow',
+        destination: 'https://stackoverflow.com/users/13132838/aiden-s',
+        permanent: true,
+      },
     ]
   },
 
