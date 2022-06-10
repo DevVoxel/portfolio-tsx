@@ -26,7 +26,7 @@ const nextConfig = {
       },
       {
         source: '/discord',
-        destination: 'https://discord.gg/users/153258046171119616',
+        destination: 'https://discordapp.com/users/153258046171119616/',
         permanent: true,
       },
       {
@@ -43,7 +43,12 @@ const nextConfig = {
         source: '/donate',
         destination: 'https://ko-fi.com/voxel20',
         permanent: true,
-      }
+      },
+      {
+        source: '/linkedin',
+        destination: 'https://www.linkedin.com/in/aidensmithdev/',
+        permanent: true,
+      },
     ]
   },
 
