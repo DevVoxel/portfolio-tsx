@@ -1,44 +1,53 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import Head from "next/head";
+import { Stack } from "@chakra-ui/react";
+import Introduction from "../components/Introduction";
+import AboutMe from "../components/About";
+import Contact from "../components/Contact";
+import FeaturedProjects from "../components/FeaturedProjects";
+import Container from "../components/UI/Container";
+import { createClient } from "contentful";
 
-const Home: NextPage = () => {
+function IndexPage({  }) {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Typescript Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="">My Portfolio</a>
-        </h1>
-
-        <p className={styles.description}>
-          Checkout my{' '}
-          <Link href="/">
-            <code className={styles.code}>Blog</code>
-          </Link>
-        </p>
-
-        <div className={styles.grid}>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="/"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <Container enableTransition={true}>
+        <Head>
+          <title>Aiden Smith</title>
+          <meta name="title" content="Aiden Smith" />
+          <meta name="description" content="Aiden Smith's personal website" />
+        </Head>
+        <Stack
+          as="main"
+          justifyContent="center"
+          spacing={"0px"}
+          alignItems="center"
+          mt={{ base: "10vh", md: "15vh" }}
         >
-          Developed by{' Voxel '}
-        </a>
-      </footer>
-    </div>
-  )
+          <Introduction />
+          <AboutMe /> {/* NEEDS FIXED - NON ESSENTIAL */}
+          {/* <FeaturedProjects projects={projects} /> */}
+          <Contact />
+        </Stack>
+      </Container>
+    </>
+  );
 }
 
-export default Home
+// let client = createClient({
+//   space: process.env.CONTENTFUL_SPACE_ID,
+//   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+// });
+
+// // export async function getStaticProps() {
+// //   let data = await client.getEntries({
+// //     content_type: "featuredProjects"
+// //   });
+
+//   return {
+//     props: {
+//       projects: data.items,
+//     },
+//   };
+// }
+
+export default IndexPage;
