@@ -13,7 +13,7 @@ import {
   } from "@chakra-ui/react";
   import { type ButtonProps } from "@chakra-ui/react";
   import { motion } from "framer-motion";
-  import { FaGithub, FaDiscord, FaLinkedin } from "react-icons/fa";
+  import { FaGithub, FaDiscord, FaLinkedin, FaEnvelope } from "react-icons/fa";
   import useMediaQuery from "../hook/useMediaQuery";
   
   export const MotionButton = motion<ButtonProps>(Button);
@@ -97,14 +97,14 @@ import {
                     LinkedIn
                   </Button>
                 </Link>
-                  <Link href="/discord" isExternal>
+                  <Link href="/mail">
                     <Button
-                      leftIcon={<FaDiscord />}
+                      leftIcon={<FaEnvelope />}
                       transition="0.3s"
                       position="static"
                       size={isLargerThan800 ? "md" : "sm"}
                     >
-                      Discord
+                      Email
                     </Button>
                   </Link>
                 </Stack>
@@ -131,16 +131,16 @@ import {
                     LinkedIn
                   </Button>
                 </Link>
-                  <Link href="/discord" isExternal>
+                  <Link href="/mail">
                     <Button
-                      leftIcon={<FaDiscord />}
+                      leftIcon={<FaEnvelope />}
                       transition="0.3s"
                       position="static"
                       size={isLargerThan800 ? "md" : "sm"}
                       mr={2}
                       mb={2}
                     >
-                      Discord
+                      Email
                     </Button>
                   </Link>
                 </Box>
