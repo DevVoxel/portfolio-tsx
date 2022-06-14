@@ -91,8 +91,7 @@ import {
                 {"  "}Furthering my knowledge with different languages and frameworks.
                 <br />
                 <br />
-                <Divider />
-                <i>
+                {/* <i>
                   {"  "}
                   Actively practicing my 
                   <MoreInfo
@@ -101,9 +100,8 @@ import {
                   />
                   development skills.
                 </i>
-                <Divider />
                 <br />
-                <br />
+                <br /> */}
                 When I&apos;m not working, I enjoy riding motorcycles, or playing video games/watching anime with my friends!  I also enjoy learning new things, and I am always looking to learn more about new &amp; upcoming technologies.
               </Text>
             </Stack>
