@@ -113,7 +113,7 @@ export async function getStaticProps() {
   let data = await client.getEntries({
     content_type: "blogPost",
     limit: 100,
-    order: "sys.createdAt",
+    order: "-fields.date",
   });
 
   return {
