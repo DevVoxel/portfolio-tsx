@@ -24,30 +24,12 @@ function IndexPage({  }) {
           mt={{ base: "10vh", md: "15vh" }}
         >
           <Introduction />
-          <AboutMe /> {/* NEEDS FIXED - NON ESSENTIAL */}
-          {/* <FeaturedProjects projects={projects} /> */}
+          <AboutMe />
           <Contact />
         </Stack>
       </Container>
     </>
   );
 }
-
-// let client = createClient({
-//   space: process.env.CONTENTFUL_SPACE_ID,
-//   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-// });
-
-// // export async function getStaticProps() {
-// //   let data = await client.getEntries({
-// //     content_type: "featuredProjects"
-// //   });
-
-//   return {
-//     props: {
-//       projects: data.items,
-//     },
-//   };
-// }
 
 export default IndexPage;
