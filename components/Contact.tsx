@@ -11,6 +11,7 @@ import {
     FaGithub,
     FaLinkedin,
     FaTwitter,
+    FaEnvelope,
   } from "react-icons/fa";
   import SlideUpWhenVisible from "../hook/slideUpWhenVisable";
   import useMediaQuery from "../hook/useMediaQuery";
@@ -77,7 +78,20 @@ import {
                     LinkedIn
                   </Button>
                 </Link>
-                <Link href="/discord" isExternal>
+                <Link href="/mail">
+                  <Button
+                    leftIcon={<FaEnvelope />}
+                    position="static"
+                    size={isLargerThan800 ? "md" : "sm"}
+                  >
+                    Email
+                  </Button>
+                </Link>
+              </Stack>
+            </SlideUpWhenVisible>
+            <SlideUpWhenVisible threshold={undefined}>
+              <Stack isInline spacing={4}>
+              <Link href="/discord" isExternal>
                   <Button
                     leftIcon={<FaDiscord />}
                     position="static"
@@ -86,10 +100,6 @@ import {
                     Discord
                   </Button>
                 </Link>
-              </Stack>
-            </SlideUpWhenVisible>
-            <SlideUpWhenVisible threshold={undefined}>
-              <Stack isInline spacing={4}>
                 <Link href="/twitter" isExternal>
                   <Button
                     leftIcon={<FaTwitter />}
