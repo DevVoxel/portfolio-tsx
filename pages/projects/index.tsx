@@ -40,7 +40,7 @@ import {
               </Text>
               <Divider />
             </Stack>
-            <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={8}>
+            <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={8}>
               {projects
                 .filter(
                   (project) =>
@@ -63,6 +63,18 @@ import {
                 ))}
             </SimpleGrid>
           </Stack>
+          <Heading fontSize={{ base: "2xl", md: "4xl" }}>First Project. (2012)</Heading>
+              <Text fontSize={{ base: "14px", md: "16px" }}>
+                This is the very first project I worked on in 2012. theRandomizr.
+              </Text>
+              <ProjectCard
+                    title={"theRandomizr"}
+                    description={"A randomization website I built in 2012 to help my brothers and I decide on a movie to watch.  It did this using an unordered list & some vanilla JavaScript.  This was the project my father used in order to introduce me to the field of Web Development."}
+                    deployLink={"https://therandomizr.com"}
+                    githubLink={"https://github.com/Voxel20/OGRandomizr"}
+                    image={"https://images.ctfassets.net/gpz0vzuizl3q/3DYntjbIXphZqT6qeqw7oa/9c7232850b211796718ced04006868e8/og-randomizr.png?h=250"}
+                    tags={["JavaScript", "HTML5", "CSS3"]}
+                  />
         </Container>
       </>
     );
