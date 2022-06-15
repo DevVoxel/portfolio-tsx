@@ -54,7 +54,7 @@ import {
                 mt={-14}
                 mb={2}
               >
-                Aiden S.
+                Aiden.
               </Heading>
               <Text fontSize="display2" fontWeight={"semibold"}>
                 A self-taught Web Developer.
