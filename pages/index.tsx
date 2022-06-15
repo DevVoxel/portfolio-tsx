@@ -3,7 +3,6 @@ import { Stack } from "@chakra-ui/react";
 import Introduction from "../components/Introduction";
 import AboutMe from "../components/About";
 import Contact from "../components/Contact";
-import FeaturedProjects from "../components/FeaturedProjects";
 import Container from "../components/UI/Container";
 import { createClient } from "contentful";
 
