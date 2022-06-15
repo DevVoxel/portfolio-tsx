@@ -11,7 +11,7 @@ import {
     Divider,
   } from "@chakra-ui/react";
   import useMediaQuery from "../hook/useMediaQuery";
-  import SlideUpWhenVisible from "../hook/slideUpWhenVisable";
+  import SlideUpWhenVisible from "../hook/slideUpWhenVisible";
   import { useColorMode } from "@chakra-ui/react";
   
   export default function AboutMe() {
