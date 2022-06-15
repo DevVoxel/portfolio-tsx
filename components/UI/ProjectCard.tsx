@@ -98,7 +98,23 @@ export default function ProjectCard({
         >
             <ScaleFade in={true}>
                 {deployLink ? (
-                    <Link href={deployLink} isExternal>
+                    <center>
+                        <Link href={deployLink} isExternal>
+                            <Image
+                                width={1250}
+                                height={600}
+                                w="auto"
+                                h="auto"
+                                src={image}
+                                transition="0.3s"
+                                placeholder="blur"
+                                borderRadius="10px 10px 0px 0px"
+                                alt="project image"
+                            ></Image>
+                        </Link>
+                    </center>
+                ) : (
+                    <center>
                         <Image
                             width={1250}
                             height={600}
@@ -110,19 +126,7 @@ export default function ProjectCard({
                             borderRadius="10px 10px 0px 0px"
                             alt="project image"
                         ></Image>
-                    </Link>
-                ) : (
-                    <Image
-                        width={1250}
-                        height={600}
-                        w="auto"
-                        h="auto"
-                        src={image}
-                        transition="0.3s"
-                        placeholder="blur"
-                        borderRadius="10px 10px 0px 0px"
-                        alt="project image"
-                    ></Image>
+                    </center>
                 )}
                 <Stack px={4} py={2}>
                     <Stack isInline justifyContent={"space-between"} alignItems={"center"}>
