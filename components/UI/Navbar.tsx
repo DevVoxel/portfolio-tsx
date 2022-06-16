@@ -37,7 +37,6 @@ import useMediaQuery from "../../hook/useMediaQuery";
 import { AiOutlineMenu } from "react-icons/ai";
 import { BsMoonFill, BsFillSunFill } from "react-icons/bs";
 
-
 export default function Navbar({ enableTransition }) {
   const isLargerThan768 = useMediaQuery(768);
   const {
@@ -144,7 +143,13 @@ export default function Navbar({ enableTransition }) {
                 </Button>
               </NextLink>
               <NextLink href={"/projects"} passHref>
-                <Button as="a" variant={"ghost"} p="4" ml="3vw" fontSize={"16px"}>
+                <Button
+                  as="a"
+                  variant={"ghost"}
+                  p="4"
+                  ml="3vw"
+                  fontSize={"16px"}
+                >
                   Projects
                 </Button>
               </NextLink>

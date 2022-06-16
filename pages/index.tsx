@@ -6,7 +6,7 @@ import Contact from "../components/Contact";
 import Container from "../components/UI/Container";
 import { createClient } from "contentful";
 
-function IndexPage({  }) {
+function IndexPage({}) {
   return (
     <>
       <Container enableTransition={true}>

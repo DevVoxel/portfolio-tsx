@@ -41,8 +41,8 @@ export default function Container({ enableTransition, children }) {
             isExternal
           >
             Suro
-          </Link>
-          {" "}private servers.
+          </Link>{" "}
+          private servers.
         </Text>
       </Stack>
     </>
