@@ -1,5 +1,6 @@
 This project will be using custom made compenents for important part of the potfolio.  I want to turn this into a repo that beginner developers can use to help with their own Potfolio Projects.  This will be the aim after I finish my own.
 
+Currently the website will be intructions, and documentation to help with beginners.  Also has some needed fixed.
 ## Getting Started
 
 First, run the development server:
