@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "env": "npm i -g vercel && vercel link && vercel env pull"
+    "env": "npm i -g vercel && vercel link && vercel env pull",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.tsx' --write"
   },
   "dependencies": {
     "@babel/core": "^7.18.2",
