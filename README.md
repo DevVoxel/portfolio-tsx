@@ -2,7 +2,7 @@ This project will be using custom made compenents for important part of the potf
 
 ## Getting Started
 
-First, install your dependencies. (We are using Yarn as the package manager)
+First, install your dependencies. (We are using Yarn as the package manager, so I suggest not using 'npm i')
 
 ```bash
 yarn
