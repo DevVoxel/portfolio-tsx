@@ -2,7 +2,13 @@ This project will be using custom made compenents for important part of the potf
 
 ## Getting Started
 
-First, run the development server:
+First, install your dependencies. (We are using Yarn as the package manager)
+
+```bash
+yarn
+```
+
+Secong, run the development server:
 
 ```bash
 npm run dev
