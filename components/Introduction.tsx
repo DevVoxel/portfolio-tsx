@@ -109,7 +109,7 @@ export default function Introduction() {
                 </Link>
               </Stack>
             ) : (
-              <Box spacing={8}>
+              <Box>
                 <Link href="/github" isExternal>
                   <Button
                     leftIcon={<FaGithub />}
