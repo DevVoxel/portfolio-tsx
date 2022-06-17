@@ -1,4 +1,5 @@
-import React from "react";
+// @ts-nocheck
+import React from 'react';
 import {
   Button,
   Flex,
@@ -30,24 +31,24 @@ import {
   VStack,
   Text,
   SimpleGrid,
-  ModalFooter,
-} from "@chakra-ui/react";
-import NextLink from "next/link";
-import useMediaQuery from "../../hook/useMediaQuery";
-import { AiOutlineMenu } from "react-icons/ai";
-import { BsMoonFill, BsFillSunFill } from "react-icons/bs";
+  ModalFooter
+} from '@chakra-ui/react';
+import NextLink from 'next/link';
+import useMediaQuery from '../../hook/useMediaQuery';
+import { AiOutlineMenu } from 'react-icons/ai';
+import { BsMoonFill, BsFillSunFill } from 'react-icons/bs';
 
 export default function Navbar({ enableTransition }) {
   const isLargerThan768 = useMediaQuery(768);
   const {
     isOpen: isOpenDrawer,
     onOpen: onOpenDrawer,
-    onClose: onCloseDrawer,
+    onClose: onCloseDrawer
   } = useDisclosure();
   const {
     isOpen: isOpenModal,
     onOpen: onOpenModal,
-    onClose: onCloseModal,
+    onClose: onCloseModal
   } = useDisclosure();
 
   const { colorMode, toggleColorMode } = useColorMode();
@@ -59,20 +60,20 @@ export default function Navbar({ enableTransition }) {
         <DrawerContent>
           <DrawerCloseButton />
           <DrawerHeader
-            borderColor={colorMode === "light" ? "#000000" : "#FFFFFF"}
+            borderColor={colorMode === 'light' ? '#000000' : '#FFFFFF'}
           >
             <Image
-              borderTop={"4vw"}
+              borderTop={'4vw'}
               borderRadius="10px"
               cursor="pointer"
               w="32px"
               h="32px"
               src={
-                colorMode === "light"
-                  ? "https://images.ctfassets.net/gpz0vzuizl3q/6mmTyMbqxsT9nky5PM2FYY/1435ff9dd9abb16351405d57fb7b412d/JuneIconV2.gif?h=250"
-                  : "https://images.ctfassets.net/gpz0vzuizl3q/6mmTyMbqxsT9nky5PM2FYY/1435ff9dd9abb16351405d57fb7b412d/JuneIconV2.gif?h=250"
+                colorMode === 'light'
+                  ? 'https://images.ctfassets.net/gpz0vzuizl3q/6mmTyMbqxsT9nky5PM2FYY/1435ff9dd9abb16351405d57fb7b412d/JuneIconV2.gif?h=250'
+                  : 'https://images.ctfassets.net/gpz0vzuizl3q/6mmTyMbqxsT9nky5PM2FYY/1435ff9dd9abb16351405d57fb7b412d/JuneIconV2.gif?h=250'
               }
-              alt={"Voxel20"}
+              alt={'Voxel20'}
             />
           </DrawerHeader>
           <DrawerBody>
@@ -114,52 +115,52 @@ export default function Navbar({ enableTransition }) {
           flexDirection="row"
           justifyContent="space-between"
           alignItems="center"
-          px={"4vw"}
-          py={{ base: "1.5vh", md: "3vh" }}
+          px={'4vw'}
+          py={{ base: '1.5vh', md: '3vh' }}
           zIndex={99}
-          backgroundColor={colorMode === "light" ? "#FFFFFF" : "#121212"}
-          borderBottom={"1px"}
-          borderColor={colorMode === "light" ? "gray.200" : "gray.700"}
+          backgroundColor={colorMode === 'light' ? '#FFFFFF' : '#121212'}
+          borderBottom={'1px'}
+          borderColor={colorMode === 'light' ? 'gray.200' : 'gray.700'}
         >
           <NextLink href="/" passHref>
             <Image
-              borderTop={"4vw"}
+              borderTop={'4vw'}
               borderRadius="10px"
-              w={{ base: "32px", md: "46px" }}
-              h={{ base: "32px", md: "46px" }}
+              w={{ base: '32px', md: '46px' }}
+              h={{ base: '32px', md: '46px' }}
               src={
-                colorMode === "light"
-                  ? "https://images.ctfassets.net/gpz0vzuizl3q/6mmTyMbqxsT9nky5PM2FYY/1435ff9dd9abb16351405d57fb7b412d/JuneIconV2.gif?h=250"
-                  : "https://images.ctfassets.net/gpz0vzuizl3q/6mmTyMbqxsT9nky5PM2FYY/1435ff9dd9abb16351405d57fb7b412d/JuneIconV2.gif?h=250"
+                colorMode === 'light'
+                  ? 'https://images.ctfassets.net/gpz0vzuizl3q/6mmTyMbqxsT9nky5PM2FYY/1435ff9dd9abb16351405d57fb7b412d/JuneIconV2.gif?h=250'
+                  : 'https://images.ctfassets.net/gpz0vzuizl3q/6mmTyMbqxsT9nky5PM2FYY/1435ff9dd9abb16351405d57fb7b412d/JuneIconV2.gif?h=250'
               }
-              alt={"Voxel20"}
+              alt={'Voxel20'}
             />
           </NextLink>
           {isLargerThan768 ? (
             <Center>
-              <NextLink href={"/"} passHref>
-                <Button as="a" variant={"ghost"} p="4" fontSize={"16px"}>
+              <NextLink href={'/'} passHref>
+                <Button as="a" variant={'ghost'} p="4" fontSize={'16px'}>
                   Home
                 </Button>
               </NextLink>
-              <NextLink href={"/projects"} passHref>
+              <NextLink href={'/projects'} passHref>
                 <Button
                   as="a"
-                  variant={"ghost"}
+                  variant={'ghost'}
                   p="4"
                   ml="3vw"
-                  fontSize={"16px"}
+                  fontSize={'16px'}
                 >
                   Projects
                 </Button>
               </NextLink>
-              <NextLink href={"/blog"} passHref>
+              <NextLink href={'/blog'} passHref>
                 <Button
                   as="a"
-                  variant={"ghost"}
+                  variant={'ghost'}
                   p="4"
                   ml="3vw"
-                  fontSize={"16px"}
+                  fontSize={'16px'}
                 >
                   Blog
                 </Button>
@@ -168,10 +169,10 @@ export default function Navbar({ enableTransition }) {
                 variant="ghost"
                 p="4"
                 ml="3vw"
-                fontSize={"16px"}
+                fontSize={'16px'}
                 onClick={toggleColorMode}
               >
-                {colorMode === "dark" ? <BsMoonFill /> : <BsFillSunFill />}
+                {colorMode === 'dark' ? <BsMoonFill /> : <BsFillSunFill />}
               </Button>
             </Center>
           ) : (
@@ -180,7 +181,7 @@ export default function Navbar({ enableTransition }) {
                 variant="ghost"
                 p="4"
                 ml="3vw"
-                fontSize={"16px"}
+                fontSize={'16px'}
                 onClick={onOpenDrawer}
               >
                 <AiOutlineMenu />

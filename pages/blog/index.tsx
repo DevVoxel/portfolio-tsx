@@ -1,6 +1,7 @@
-import Container from "../../components/UI/Container";
-import Head from "next/head";
-import { useState } from "react";
+// @ts-nocheck
+import Container from '../../components/UI/Container';
+import Head from 'next/head';
+import { useState } from 'react';
 import {
   Heading,
   Stack,
@@ -12,17 +13,17 @@ import {
   Box,
   Flex,
   Link,
-  useColorMode,
-} from "@chakra-ui/react";
+  useColorMode
+} from '@chakra-ui/react';
 // import { FaSearch } from "react-icons/fa";
-import useMediaQuery from "../../hook/useMediaQuery";
-import dateFormat from "dateformat";
-import readingTime from "reading-time";
-import { Image } from "@chakra-ui/react";
+import useMediaQuery from '../../hook/useMediaQuery';
+import dateFormat from 'dateformat';
+import readingTime from 'reading-time';
+import { Image } from '@chakra-ui/react';
 
 export default function IndexBlog({ articles }) {
   const { colorMode } = useColorMode();
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
   const handleChange = (e) => {
     setQuery(e.target.value);
   };
@@ -39,11 +40,11 @@ export default function IndexBlog({ articles }) {
         <Stack
           spacing={10}
           justifyContent="center"
-          my={["10vh", "10vh", "15vh", "15vh"]}
+          my={['10vh', '10vh', '15vh', '15vh']}
         >
           <Stack spacing={5}>
-            <Heading fontSize={{ base: "4xl", md: "6xl" }}>Blog</Heading>
-            <Text fontSize={{ base: "14px", md: "16px" }}>
+            <Heading fontSize={{ base: '4xl', md: '6xl' }}>Blog</Heading>
+            <Text fontSize={{ base: '14px', md: '16px' }}>
               I will be posting my development experiences, and personal
               thoughts here.
             </Text>
@@ -62,21 +63,21 @@ export default function IndexBlog({ articles }) {
             {articles.map((article) => (
               <Stack
                 key={postTotal++}
-                direction={isLargerThan1024 ? "row" : "column"}
+                direction={isLargerThan1024 ? 'row' : 'column'}
                 alignItems="flex-start"
                 justifyContent="flex-start"
                 pb={4}
                 p={2}
-                borderRadius={"10px"}
+                borderRadius={'10px'}
                 border="1px"
-                borderColor={colorMode === "light" ? "gray.200" : "gray.700"}
+                borderColor={colorMode === 'light' ? 'gray.200' : 'gray.700'}
               >
                 <Flex flexDirection="column">
                   <Text fontSize="sm">
-                    {dateFormat(Date.parse(article.fields.date), "mmm d yyyy")}{" "}
+                    {dateFormat(Date.parse(article.fields.date), 'mmm d yyyy')}{' '}
                     &bull; {readingTime(article.fields.body).text}
                   </Text>
-                  <Link href={"/blog/" + article.fields.slug} _hover="none">
+                  <Link href={'/blog/' + article.fields.slug} _hover="none">
                     <a>
                       <Text fontSize="xl" fontWeight="bold">
                         {article.fields.title}
@@ -84,7 +85,7 @@ export default function IndexBlog({ articles }) {
                     </a>
                   </Link>
                   <Text>{article.fields.summary}</Text>
-                  <Link href={"/blog/" + article.fields.slug}>
+                  <Link href={'/blog/' + article.fields.slug}>
                     <a>
                       <Text color="button1" cursor="pointer">
                         Read more &rarr;
@@ -101,21 +102,21 @@ export default function IndexBlog({ articles }) {
   );
 }
 
-const client = require("contentful").createClient({
+const client = require('contentful').createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
 });
 
 export async function getStaticProps() {
   let data = await client.getEntries({
-    content_type: "blogPost",
+    content_type: 'blogPost',
     limit: 100,
-    order: "-fields.date",
+    order: '-fields.date'
   });
 
   return {
     props: {
-      articles: data.items.reverse(),
-    },
+      articles: data.items.reverse()
+    }
   };
 }

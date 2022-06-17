@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   Text,
   Stack,
@@ -8,11 +9,11 @@ import {
   PopoverContent,
   PopoverBody,
   PopoverArrow,
-  Divider,
-} from "@chakra-ui/react";
-import useMediaQuery from "../hook/useMediaQuery";
-import SlideUpWhenVisible from "../hook/slideUpWhenVisible";
-import { useColorMode } from "@chakra-ui/react";
+  Divider
+} from '@chakra-ui/react';
+import useMediaQuery from '../hook/useMediaQuery';
+import SlideUpWhenVisible from '../hook/slideUpWhenVisible';
+import { useColorMode } from '@chakra-ui/react';
 
 export default function AboutMe() {
   const isLargerThan800 = useMediaQuery(800);
@@ -21,12 +22,12 @@ export default function AboutMe() {
   const MoreInfo = ({ text, content }) => {
     return (
       <>
-        {" "}
+        {' '}
         {isLargerThan800 ? (
           <Popover trigger="hover" placement="top">
             <PopoverTrigger>
               <chakra.span
-                color={colorMode === "light" ? "#5E81AC" : "#90CDF4"}
+                color={colorMode === 'light' ? '#5E81AC' : '#90CDF4'}
                 cursor="help"
               >
                 {text}
@@ -38,10 +39,10 @@ export default function AboutMe() {
             </PopoverContent>
           </Popover>
         ) : (
-          <Text as="span" color={colorMode === "light" ? "#2A4365" : "#90CDF4"}>
+          <Text as="span" color={colorMode === 'light' ? '#2A4365' : '#90CDF4'}>
             {text}
           </Text>
-        )}{" "}
+        )}{' '}
       </>
     );
   };
@@ -52,20 +53,20 @@ export default function AboutMe() {
         <SlideUpWhenVisible threshold={undefined}>
           <Stack
             spacing={4}
-            mx={{ base: "0", sm: "8vw", md: "12vw", lg: "16vw" }}
-            mt={"25vh"}
-            mb={"25vh"}
+            mx={{ base: '0', sm: '8vw', md: '12vw', lg: '16vw' }}
+            mt={'25vh'}
+            mb={'25vh'}
           >
             <Heading fontFamily="Ubuntu" fontSize="2xl">
               About Me.
             </Heading>
-            <Text fontSize={{ base: "14px", md: "16px" }} whiteSpace="pre-line">
+            <Text fontSize={{ base: '14px', md: '16px' }} whiteSpace="pre-line">
               Hi! I&apos;m Aiden Smith, and I&apos;ve been working with
               computers since I was young. Starting with a website built to help
               my brothers and I decide on movies to watch back in 2010. <br />
               <br />I really liked to build websites that related to my personal
               needs back in 2010, and from that, I taught myself how to code.
-              Nowadays, I develope using various languages like{" "}
+              Nowadays, I develope using various languages like{' '}
               <MoreInfo
                 text="JavaScript,"
                 content="JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat."
@@ -90,7 +91,7 @@ export default function AboutMe() {
                 text="Discord Server Developement."
                 content="Discord is a VoIP and instant messaging social platform. Users have the ability to communicate with voice calls, video calls, text messaging, media and files in private chats or as part of communities called 'servers'."
               />
-              {"  "}Furthering my knowledge with different languages and
+              {'  '}Furthering my knowledge with different languages and
               frameworks.
               <br />
               <br />

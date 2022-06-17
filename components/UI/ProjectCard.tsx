@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   ScaleFade,
   Stack,
@@ -9,9 +10,9 @@ import {
   Link,
   Divider,
   Box,
-  useColorMode,
-} from "@chakra-ui/react";
-import { FaExternalLinkAlt, FaGithub, FaReact } from "react-icons/fa";
+  useColorMode
+} from '@chakra-ui/react';
+import { FaExternalLinkAlt, FaGithub, FaReact } from 'react-icons/fa';
 import {
   SiTypescript,
   SiJavascript,
@@ -29,10 +30,10 @@ import {
   SiTailwindcss,
   SiMarkdown,
   SiBlazor,
-  SiGit,
-} from "react-icons/si";
-import { VscTerminalBash } from "react-icons/vsc";
-import useMediaQuery from "../../hook/useMediaQuery";
+  SiGit
+} from 'react-icons/si';
+import { VscTerminalBash } from 'react-icons/vsc';
+import useMediaQuery from '../../hook/useMediaQuery';
 
 export default function ProjectCard({
   title,
@@ -40,151 +41,151 @@ export default function ProjectCard({
   image,
   githubLink,
   deployLink,
-  tags,
+  tags
 }) {
   const getTag = (tag) => {
     let values = [];
     switch (tag) {
-      case "TypeScript":
+      case 'TypeScript':
         {
-          values[0] = "blue";
+          values[0] = 'blue';
           values[1] = SiTypescript;
         }
         break;
-      case "JavaScript":
+      case 'JavaScript':
         {
-          values[0] = "yellow";
+          values[0] = 'yellow';
           values[1] = SiJavascript;
         }
         break;
-      case "Bash":
+      case 'Bash':
         {
-          values[0] = "grey";
+          values[0] = 'grey';
           values[1] = VscTerminalBash;
         }
         break;
-      case "React":
+      case 'React':
         {
-          values[0] = "blue";
+          values[0] = 'blue';
           values[1] = FaReact;
         }
         break;
-      case "NextJS":
+      case 'NextJS':
         {
-          values[0] = "grey";
+          values[0] = 'grey';
           values[1] = SiNextdotjs;
         }
         break;
-      case "JavaScript":
+      case 'JavaScript':
         {
-          values[0] = "yellow";
+          values[0] = 'yellow';
           values[1] = SiJavascript;
         }
         break;
-      case "CSS3":
+      case 'CSS3':
         {
-          values[0] = "green";
+          values[0] = 'green';
           values[1] = SiCss3;
         }
         break;
-      case "CSS":
+      case 'CSS':
         {
-          values[0] = "green";
+          values[0] = 'green';
           values[1] = SiCss3;
         }
         break;
-      case "HTML5":
+      case 'HTML5':
         {
-          values[0] = "red";
+          values[0] = 'red';
           values[1] = SiHtml5;
         }
         break;
-      case "HTML":
+      case 'HTML':
         {
-          values[0] = "red";
+          values[0] = 'red';
           values[1] = SiHtml5;
         }
         break;
-      case "ChakraUI":
+      case 'ChakraUI':
         {
-          values[0] = "purple";
+          values[0] = 'purple';
           values[1] = SiChakraui;
         }
         break;
-      case "Prisma":
+      case 'Prisma':
         {
-          values[0] = "cyan";
+          values[0] = 'cyan';
           values[1] = SiPrisma;
         }
         break;
-      case "PHP":
+      case 'PHP':
         {
-          values[0] = "purple";
+          values[0] = 'purple';
           values[1] = SiPhp;
         }
         break;
-      case "Bootstrap":
+      case 'Bootstrap':
         {
-          values[0] = "grey";
+          values[0] = 'grey';
           values[1] = SiBootstrap;
         }
         break;
-      case "MySQL":
+      case 'MySQL':
         {
-          values[0] = "orange";
+          values[0] = 'orange';
           values[1] = SiMysql;
         }
         break;
-      case "Laravel":
+      case 'Laravel':
         {
-          values[0] = "pink";
+          values[0] = 'pink';
           values[1] = SiLaravel;
         }
         break;
-      case "Docker":
+      case 'Docker':
         {
-          values[0] = "cyan";
+          values[0] = 'cyan';
           values[1] = SiDocker;
         }
         break;
-      case "JQuery":
+      case 'JQuery':
         {
-          values[0] = "yellow";
+          values[0] = 'yellow';
           values[1] = SiJquery;
         }
         break;
-      case "TailwindCSS":
+      case 'TailwindCSS':
         {
-          values[0] = "blue";
+          values[0] = 'blue';
           values[1] = SiTailwindcss;
         }
         break;
-      case "MDX":
+      case 'MDX':
         {
-          values[0] = "white";
+          values[0] = 'white';
           values[1] = SiMarkdown;
         }
         break;
-      case "Blade":
+      case 'Blade':
         {
-          values[0] = "orange";
+          values[0] = 'orange';
           values[1] = SiBlazor;
         }
         break;
-      case "PHPUnit":
+      case 'PHPUnit':
         {
-          values[0] = "purple";
+          values[0] = 'purple';
           values[1] = SiPhp;
         }
         break;
-      case "Git":
+      case 'Git':
         {
-          values[0] = "black";
+          values[0] = 'black';
           values[1] = SiGit;
         }
         break;
       default: {
-        values[0] = "white";
+        values[0] = 'white';
       }
     }
     return values;
@@ -198,7 +199,7 @@ export default function ProjectCard({
     <Tag
       key={item}
       colorScheme={getTag(item)[0]}
-      size={isLargerThan800 ? "md" : "sm"}
+      size={isLargerThan800 ? 'md' : 'sm'}
     >
       <TagLeftIcon as={getTag(item)[1]}></TagLeftIcon>
       <TagLabel>{item}</TagLabel>
@@ -207,11 +208,11 @@ export default function ProjectCard({
 
   return (
     <Stack
-      borderRadius={"10px"}
-      minH={"320px"}
-      maxH={"500px"}
-      border={"1px"}
-      borderColor={colorMode === "light" ? "gray.200" : "gray.700"}
+      borderRadius={'10px'}
+      minH={'320px'}
+      maxH={'500px'}
+      border={'1px'}
+      borderColor={colorMode === 'light' ? 'gray.200' : 'gray.700'}
     >
       <ScaleFade in={true}>
         {deployLink ? (
@@ -248,22 +249,22 @@ export default function ProjectCard({
         <Stack px={4} py={2}>
           <Stack
             isInline
-            justifyContent={"space-between"}
-            alignItems={"center"}
+            justifyContent={'space-between'}
+            alignItems={'center'}
           >
-            <Text fontFamily="Ubuntu" fontSize={"2xl"}>
+            <Text fontFamily="Ubuntu" fontSize={'2xl'}>
               {title}
             </Text>
             <Stack
               isInline
-              justifyContent={"flex-end"}
-              alignItems={"center"}
+              justifyContent={'flex-end'}
+              alignItems={'center'}
               spacing={4}
             >
               {githubLink ? (
                 <Link
                   href={githubLink}
-                  color={colorMode === "light" ? "black" : "white"}
+                  color={colorMode === 'light' ? 'black' : 'white'}
                   isExternal
                 >
                   <FaGithub size={23} />
@@ -274,7 +275,7 @@ export default function ProjectCard({
               {deployLink ? (
                 <Link
                   href={deployLink}
-                  color={colorMode === "light" ? "black" : "white"}
+                  color={colorMode === 'light' ? 'black' : 'white'}
                   isExternal
                 >
                   <FaExternalLinkAlt size={23} />
@@ -292,7 +293,7 @@ export default function ProjectCard({
             </Stack>
           )}
           <Divider />
-          <Text fontSize={["sm", "md"]}>{description}</Text>
+          <Text fontSize={['sm', 'md']}>{description}</Text>
         </Stack>
       </ScaleFade>
     </Stack>

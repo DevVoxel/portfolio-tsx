@@ -9,22 +9,22 @@ import {
   Divider,
   useColorMode,
   Image,
-  chakra,
-} from "@chakra-ui/react";
-import NextLink from "next/link";
-import Highlight, { defaultProps } from "prism-react-renderer";
-import lightTheme from "prism-react-renderer/themes/vsLight";
-import darkTheme from "prism-react-renderer/themes/vsDark";
+  chakra
+} from '@chakra-ui/react';
+import NextLink from 'next/link';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import lightTheme from 'prism-react-renderer/themes/vsLight';
+import darkTheme from 'prism-react-renderer/themes/vsDark';
 
-const CustomLink = (props) => {
+const CustomLink = ({ props }: any) => {
   const { colorMode } = useColorMode();
   const color = {
-    light: "#5E81AC",
-    dark: "#90CDF4",
+    light: '#5E81AC',
+    dark: '#90CDF4'
   };
 
   const href = props.href;
-  const isInternalLink = href && (href.startsWith("/") || href.startsWith("#"));
+  const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'));
 
   if (isInternalLink) {
     return (
@@ -37,22 +37,22 @@ const CustomLink = (props) => {
   return <Link color={color[colorMode]} isExternal {...props} />;
 };
 
-const DocsHeading = (props) => (
+const DocsHeading = ({ props }: any) => (
   <Heading
     css={{
-      scrollMarginTop: "100px",
-      scrollSnapMargin: "100px", // Safari
-      "&[id]": {
-        pointerEvents: "none",
+      scrollMarginTop: '100px',
+      scrollSnapMargin: '100px', // Safari
+      '&[id]': {
+        pointerEvents: 'none'
       },
-      "&[id]:before": {
-        display: "block",
-        height: " 6rem",
-        marginTop: "-6rem",
-        visibility: "hidden",
-        content: `""`,
+      '&[id]:before': {
+        display: 'block',
+        height: ' 6rem',
+        marginTop: '-6rem',
+        visibility: 'hidden',
+        content: `""`
       },
-      "&[id]:hover a": { opacity: 1 },
+      '&[id]:hover a': { opacity: 1 }
     }}
     {...props}
     mb="1em"
@@ -69,7 +69,7 @@ const DocsHeading = (props) => (
           outline="none"
           _focus={{
             opacity: 1,
-            boxShadow: "outline",
+            boxShadow: 'outline'
           }}
           opacity="0"
           ml="0.375rem"
@@ -85,19 +85,19 @@ const DocsHeading = (props) => (
 const Hr = () => {
   const { colorMode } = useColorMode();
   const borderColor = {
-    light: "gray.200",
-    dark: "gray.600",
+    light: 'gray.200',
+    dark: 'gray.600'
   };
 
   return <Divider borderColor={borderColor[colorMode]} my={4} w="100%" />;
 };
 
-const Pre = (props) => {
+const Pre = ({ props }: any) => {
   const { colorMode } = useColorMode();
 
-  const className = props.children.props.className || "";
+  const className = props.children.props.className || '';
   const matches = className.match(/language-(?<lang>.*)/);
-  const theme = colorMode === "light" ? lightTheme : darkTheme;
+  const theme = colorMode === 'light' ? lightTheme : darkTheme;
   return (
     <Highlight
       {...defaultProps}
@@ -108,10 +108,10 @@ const Pre = (props) => {
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <chakra.pre
           css={{
-            textAlign: "left",
-            margin: "1em 0",
-            padding: "0.5em",
-            border: "1px",
+            textAlign: 'left',
+            margin: '1em 0',
+            padding: '0.5em',
+            border: '1px'
           }}
           className={className}
           style={style}
@@ -120,11 +120,11 @@ const Pre = (props) => {
             <div {...getLineProps({ line, key: i })}>
               <chakra.span
                 css={{
-                  display: "inline-block",
-                  width: "2em",
-                  userSelect: "none",
+                  display: 'inline-block',
+                  width: '2em',
+                  userSelect: 'none',
                   opacity: 0.5,
-                  marginLeft: 10,
+                  marginLeft: 10
                 }}
                 {...getLineProps({ line, key: i })}
               >
@@ -142,15 +142,25 @@ const Pre = (props) => {
 };
 
 const MDXComponents = {
-  h1: (props) => (
+  h1: ({ props }: any) => (
     <Heading as="h1" size="xl" my={4} color="displayColor" {...props} />
   ),
-  h2: (props) => <DocsHeading as="h2" size="lg" fontWeight="bold" {...props} />,
-  h3: (props) => <DocsHeading as="h3" size="md" fontWeight="bold" {...props} />,
-  h4: (props) => <DocsHeading as="h4" size="sm" fontWeight="bold" {...props} />,
-  h5: (props) => <DocsHeading as="h5" size="sm" fontWeight="bold" {...props} />,
-  h6: (props) => <DocsHeading as="h6" size="xs" fontWeight="bold" {...props} />,
-  img: (props) => (
+  h2: ({ props }: any) => (
+    <DocsHeading as="h2" size="lg" fontWeight="bold" {...props} />
+  ),
+  h3: ({ props }: any) => (
+    <DocsHeading as="h3" size="md" fontWeight="bold" {...props} />
+  ),
+  h4: ({ props }: any) => (
+    <DocsHeading as="h4" size="sm" fontWeight="bold" {...props} />
+  ),
+  h5: ({ props }: any) => (
+    <DocsHeading as="h5" size="sm" fontWeight="bold" {...props} />
+  ),
+  h6: ({ props }: any) => (
+    <DocsHeading as="h6" size="xs" fontWeight="bold" {...props} />
+  ),
+  img: ({ props }: any) => (
     <Image
       width={600}
       height={300}
@@ -164,17 +174,17 @@ const MDXComponents = {
       {...props}
     />
   ),
-  inlineCode: (props) => (
-    <Code colorScheme={"blue"} fontSize="0.84em" {...props} />
+  inlineCode: ({ props }: any) => (
+    <Code colorScheme={'blue'} fontSize="0.84em" {...props} />
   ),
-  pre: (props) => Pre(props),
-  br: (props) => <Box height="24px" {...props} />,
+  pre: ({ props }: any) => Pre(props),
+  br: ({ props }: any) => <Box height="24px" {...props} />,
   hr: Hr,
   a: CustomLink,
-  p: (props) => <Text as="p" mt={0} lineHeight="tall" {...props} />,
-  ul: (props) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
-  ol: (props) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
-  li: (props) => <Box as="li" pb={1} {...props} />,
+  p: ({ props }: any) => <Text as="p" mt={0} lineHeight="tall" {...props} />,
+  ul: ({ props }: any) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
+  ol: ({ props }: any) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
+  li: ({ props }: any) => <Box as="li" pb={1} {...props} />
 };
 
 export { CustomLink };

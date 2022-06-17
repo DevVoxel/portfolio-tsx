@@ -1,10 +1,11 @@
-import { theme as chakraTheme } from "@chakra-ui/react";
-import { extendTheme, ThemeConfig } from "@chakra-ui/react";
-import { mode, createBreakpoints } from "@chakra-ui/theme-tools";
+// @ts-nocheck
+import { theme as chakraTheme } from '@chakra-ui/react';
+import { extendTheme, ThemeConfig } from '@chakra-ui/react';
+import { mode, createBreakpoints } from '@chakra-ui/theme-tools';
 
 const config: Partial<ThemeConfig> = {
   useSystemColorMode: true,
-  initialColorMode: "dark",
+  initialColorMode: 'dark'
 };
 
 const fluidType = (minFont, maxFont) => {
@@ -17,76 +18,76 @@ const fluidType = (minFont, maxFont) => {
 const styles = {
   global: (props) => ({
     body: {
-      color: mode("#111111", "#FFFFFF")(props),
-      bg: mode("#FFFFFF", "#111111")(props),
-    },
-  }),
+      color: mode('#111111', '#FFFFFF')(props),
+      bg: mode('#FFFFFF', '#111111')(props)
+    }
+  })
 };
 
 const components = {
   Drawer: {
     baseStyle: (props) => ({
       dialog: {
-        bg: mode("white", "#101212")(props),
-      },
-    }),
+        bg: mode('white', '#101212')(props)
+      }
+    })
   },
 
   Menu: {
     baseStyle: (props) => ({
       list: {
-        bg: mode("white", "#101212")(props),
-      },
-    }),
+        bg: mode('white', '#101212')(props)
+      }
+    })
   },
 
   Modal: {
     baseStyle: (props) => ({
       dialog: {
-        bg: mode("white", "#101212")(props),
-      },
-    }),
+        bg: mode('white', '#101212')(props)
+      }
+    })
   },
 
   Popover: {
     baseStyle: (props) => ({
       content: {
-        bg: mode("white", "#101212")(props),
-      },
-    }),
+        bg: mode('white', '#101212')(props)
+      }
+    })
   },
 
   Button: {
     baseStyle: (props) => ({
-      position: "static",
-    }),
+      position: 'static'
+    })
   },
 
   Divider: {
     baseStyle: (props) => ({
-      zIndex: "-1",
-    }),
+      zIndex: '-1'
+    })
   },
 
   Input: {
     baseStyle: (props) => ({
-      position: "static",
-    }),
-  },
+      position: 'static'
+    })
+  }
 };
 ``;
 const fonts = {
   ...chakraTheme.fonts,
   body: `Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`,
-  heading: `Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`,
+  heading: `Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"`
 };
 
 const breakpoints = createBreakpoints({
-  base: "0em",
-  sm: "30em",
-  md: "48em",
-  lg: "80em",
-  xl: "80em",
+  base: '0em',
+  sm: '30em',
+  md: '48em',
+  lg: '80em',
+  xl: '80em'
 });
 
 const overrides = {
@@ -99,7 +100,7 @@ const overrides = {
   fontWeights: {
     normal: 300,
     medium: 600,
-    bold: 700,
+    bold: 700
   },
   fontSizes: {
     // xs: fluidType(6, 12),
@@ -116,8 +117,8 @@ const overrides = {
     // '8xl': fluidType(36, 72),
     display: fluidType(80, 144),
     display2: fluidType(24, 36),
-    display3: fluidType(16, 24),
-  },
+    display3: fluidType(16, 24)
+  }
 };
 
 const customTheme = extendTheme(overrides);

@@ -1,8 +1,9 @@
-import React from "react";
-import { Flex, Stack, Text, Link } from "@chakra-ui/react";
-import Navbar from "./Navbar";
-import useMediaQuery from "../../hook/useMediaQuery";
-import { useColorMode } from "@chakra-ui/react";
+// @ts-nocheck
+import React from 'react';
+import { Flex, Stack, Text, Link } from '@chakra-ui/react';
+import Navbar from './Navbar';
+import useMediaQuery from '../../hook/useMediaQuery';
+import { useColorMode } from '@chakra-ui/react';
 
 export default function Container({ enableTransition, children }) {
   const { colorMode } = useColorMode();
@@ -15,8 +16,8 @@ export default function Container({ enableTransition, children }) {
         as="main"
         justifyContent="center"
         flexDirection="column"
-        px={isLargerThan768 ? "15vw" : "8vw"}
-        py={isLargerThan768 ? "4vw" : "8vw"}
+        px={isLargerThan768 ? '15vw' : '8vw'}
+        py={isLargerThan768 ? '4vw' : '8vw'}
       >
         {children}
       </Flex>
@@ -24,24 +25,24 @@ export default function Container({ enableTransition, children }) {
         <Text textAlign="center" fontSize="sm">
           Developed by Aiden Smith.
           <br />
-          Built with{" "}
+          Built with{' '}
           <Link
             href="https://nextjs.org/"
             fontWeight="semibold"
-            color={colorMode === "light" ? "#5E81AC" : "#90CDF4"}
+            color={colorMode === 'light' ? '#5E81AC' : '#90CDF4'}
             isExternal
           >
             Next.js
           </Link>
-          . Hosted on{" "}
+          . Hosted on{' '}
           <Link
             href="https://suro.club/"
             fontWeight="semibold"
-            color={colorMode === "light" ? "#5E81AC" : "#90CDF4"}
+            color={colorMode === 'light' ? '#5E81AC' : '#90CDF4'}
             isExternal
           >
             Suro
-          </Link>{" "}
+          </Link>{' '}
           private servers.
         </Text>
       </Stack>
