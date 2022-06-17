@@ -39,7 +39,7 @@ function ProjectPage({ projects }) {
               A list of projects I have created or worked on.
             </Text>
             <Divider />
-            <Stack maxW={500} spacing={5} alignSelf="center">
+            <Stack maxW={700} spacing={5} alignSelf="center">
               <ProjectCard
                 title={'Tabletop Nerds'}
                 description={
