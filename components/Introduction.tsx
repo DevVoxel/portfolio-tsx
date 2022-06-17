@@ -9,12 +9,12 @@ import {
   Box,
   Image,
   useColorMode,
-  Link,
-} from "@chakra-ui/react";
-import { type ButtonProps } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import { FaGithub, FaDiscord, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import useMediaQuery from "../hook/useMediaQuery";
+  Link
+} from '@chakra-ui/react';
+import { type ButtonProps } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
+import { FaGithub, FaDiscord, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import useMediaQuery from '../hook/useMediaQuery';
 
 export const MotionButton = motion<ButtonProps>(Button);
 
@@ -37,7 +37,7 @@ export default function Introduction() {
           >
             <Heading
               fontSize="display2"
-              color={colorMode === "light" ? "#A7C7E7" : "#90CDF4"}
+              color={colorMode === 'light' ? '#A7C7E7' : '#90CDF4'}
               fontWeight="medium"
             >
               Hi there, my name is...
@@ -49,15 +49,15 @@ export default function Introduction() {
           >
             <Heading
               fontSize="display"
-              letterSpacing={{ sm: "-1.2px", md: "-1.8px" }}
+              letterSpacing={{ sm: '-1.2px', md: '-1.8px' }}
               fontWeight="bold"
               mt={-14}
               mb={2}
             >
               Aiden.
             </Heading>
-            <Text fontSize="display2" fontWeight={"semibold"}>
-              A self-taught Web Developer.
+            <Text fontSize="display2" fontWeight={'semibold'}>
+              A Full-Stack Web Developer.
             </Text>
           </SlideFade>
 
@@ -77,13 +77,13 @@ export default function Introduction() {
             transition={{ enter: { duration: 0.4, delay: 1.0 } }}
           >
             {isLargerThan400 ? (
-              <Stack isInline spacing={4}>
+              <Stack isInline spacing={8}>
                 <Link href="/github" isExternal>
                   <Button
                     leftIcon={<FaGithub />}
                     transition="0.3s"
                     position="static"
-                    size={isLargerThan800 ? "md" : "sm"}
+                    size={isLargerThan800 ? 'md' : 'sm'}
                   >
                     GitHub
                   </Button>
@@ -92,7 +92,7 @@ export default function Introduction() {
                   <Button
                     leftIcon={<FaLinkedin />}
                     position="static"
-                    size={isLargerThan800 ? "md" : "sm"}
+                    size={isLargerThan800 ? 'md' : 'sm'}
                   >
                     LinkedIn
                   </Button>
@@ -102,20 +102,20 @@ export default function Introduction() {
                     leftIcon={<FaEnvelope />}
                     transition="0.3s"
                     position="static"
-                    size={isLargerThan800 ? "md" : "sm"}
+                    size={isLargerThan800 ? 'md' : 'sm'}
                   >
                     Email
                   </Button>
                 </Link>
               </Stack>
             ) : (
-              <Box>
+              <Box spacing={8}>
                 <Link href="/github" isExternal>
                   <Button
                     leftIcon={<FaGithub />}
                     transition="0.3s"
                     position="static"
-                    size={isLargerThan800 ? "md" : "sm"}
+                    size={isLargerThan800 ? 'md' : 'sm'}
                     mr={2}
                     mb={2}
                   >
@@ -126,7 +126,9 @@ export default function Introduction() {
                   <Button
                     leftIcon={<FaLinkedin />}
                     position="static"
-                    size={isLargerThan800 ? "md" : "sm"}
+                    size={isLargerThan800 ? 'md' : 'sm'}
+                    mr={2}
+                    mb={2}
                   >
                     LinkedIn
                   </Button>
@@ -136,7 +138,7 @@ export default function Introduction() {
                     leftIcon={<FaEnvelope />}
                     transition="0.3s"
                     position="static"
-                    size={isLargerThan800 ? "md" : "sm"}
+                    size={isLargerThan800 ? 'md' : 'sm'}
                     mr={2}
                     mb={2}
                   >
@@ -156,21 +158,21 @@ export default function Introduction() {
             mt={16}
             alignItems="normal"
             justifyContent="center"
-            display={isLargerThan800 ? "block" : "none"}
+            display={isLargerThan800 ? 'block' : 'none'}
           >
             <Box
-              maxW={{ base: "312px", md: "412px", lg: "512px" }}
-              maxH={{ base: "312px", md: "412px", lg: "512px" }}
+              maxW={{ base: '312px', md: '412px', lg: '512px' }}
+              maxH={{ base: '312px', md: '412px', lg: '512px' }}
             >
               <Image
-                src={"https://avatars.githubusercontent.com/u/29802327?v=4"}
+                src={'https://avatars.githubusercontent.com/u/29802327?v=4'}
                 w="100%"
                 h="100%"
                 placeholder="blur"
-                borderRadius={"full"}
-                maxW={{ base: "312px", md: "452px", lg: "612px" }}
-                maxH={{ base: "312px", md: "452px", lg: "612px" }}
-                alt={"Voxel20"}
+                borderRadius={'full'}
+                maxW={{ base: '312px', md: '452px', lg: '612px' }}
+                maxH={{ base: '312px', md: '452px', lg: '612px' }}
+                alt={'Voxel20'}
               />
             </Box>
           </Flex>
