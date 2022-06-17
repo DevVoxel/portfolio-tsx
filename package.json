@@ -2,6 +2,9 @@
   "name": "portfolio-tsx",
   "version": "0.1.0",
   "private": true,
+  "author": "Aiden Smith <aidensmith20@gmail.com",
+  "repository": "https://github.com/Voxel20/portfolio-tsx",
+  "description": "Aiden Smith. Portfolio Website (TypeScript Variant)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
