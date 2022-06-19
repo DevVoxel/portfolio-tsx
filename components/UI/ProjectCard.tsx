@@ -210,7 +210,7 @@ export default function ProjectCard({
     <Stack
       borderRadius={'10px'}
       minH={'320px'}
-      maxH={'500px'}
+      maxH={'580px'}
       border={'1px'}
       borderColor={colorMode === 'light' ? 'gray.200' : 'gray.700'}
     >
