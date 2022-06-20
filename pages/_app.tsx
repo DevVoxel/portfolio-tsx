@@ -1,10 +1,18 @@
-import Head from "next/head";
-import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
-import type { AppProps } from "next/app";
+import Head from 'next/head';
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
+import type { AppProps } from 'next/app';
 
-import customTheme from "../styles/theme";
+import customTheme from '../styles/theme';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 function App({ Component, pageProps: { session, ...pageProps } }: AppProps) {
+  const { pathname } = useRouter();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       <Head>
