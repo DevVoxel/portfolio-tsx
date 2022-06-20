@@ -4,7 +4,9 @@ import Introduction from '../components/Introduction';
 import AboutMe from '../components/About';
 import Contact from '../components/Contact';
 import Container from '../components/UI/Container';
-import { createClient } from 'contentful';
+import Scroll from '../components/Scroll';
+import { Button } from '@chakra-ui/react';
+import { AiOutlineArrowUp } from 'react-icons/ai';
 
 function IndexPage({}) {
   return (
@@ -27,6 +29,7 @@ function IndexPage({}) {
           <Contact />
         </Stack>
       </Container>
+      <Scroll />
     </>
   );
 }

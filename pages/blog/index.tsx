@@ -19,7 +19,7 @@ import {
 import useMediaQuery from '../../hook/useMediaQuery';
 import dateFormat from 'dateformat';
 import readingTime from 'reading-time';
-import { Image } from '@chakra-ui/react';
+import Scroll from '../../components/Scroll';
 
 export default function IndexBlog({ articles }) {
   const { colorMode } = useColorMode();
@@ -98,6 +98,7 @@ export default function IndexBlog({ articles }) {
           </Stack>
         </Stack>
       </Container>
+      <Scroll />
     </>
   );
 }

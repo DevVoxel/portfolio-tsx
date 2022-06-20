@@ -12,6 +12,7 @@ import {
 import { createClient } from 'contentful';
 import Head from 'next/head';
 import { useState } from 'react';
+import Scroll from '../../components/Scroll';
 import Container from '../../components/UI/Container';
 import ProjectCard from '../../components/UI/ProjectCard';
 
@@ -106,6 +107,7 @@ function ProjectPage({ projects }) {
           />
         </Stack>
       </Container>
+      <Scroll />
     </>
   );
 }

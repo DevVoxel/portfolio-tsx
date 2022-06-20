@@ -6,6 +6,7 @@ import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import PostContainer from '../../components/Blog/PostContainer';
 import MDXComponents from '../../components/Blog/MDXComponents';
+import Scroll from '../../components/Scroll';
 import {
   Avatar,
   Heading,
@@ -90,6 +91,7 @@ function Post({ data, source }) {
           </Stack>
         </Stack>
       </Container>
+      <Scroll />
     </>
   );
 }
