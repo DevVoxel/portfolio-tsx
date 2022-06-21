@@ -41,8 +41,11 @@ export default function ProjectCard({
   image,
   githubLink,
   deployLink,
-  tags
+  tags,
+  slug
 }) {
+  const slugUrl = `/projects/${slug}`;
+
   const getTag = (tag) => {
     let values = [];
     switch (tag) {
@@ -215,9 +218,9 @@ export default function ProjectCard({
       borderColor={colorMode === 'light' ? 'gray.200' : 'gray.700'}
     >
       <ScaleFade in={true}>
-        {deployLink ? (
+        {slug ? (
           <center>
-            <Link href={deployLink} isExternal>
+            <Link href={slugUrl}>
               <Image
                 width={1250}
                 height={600}
