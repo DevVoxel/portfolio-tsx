@@ -1,40 +1,78 @@
-This project will be using custom made compenents for important part of the potfolio.  I want to turn this into a repo that beginner developers can use to help with their own Potfolio Projects.  This will be the aim after I finish my own.
+# Personal Portfolio
 
-## Getting Started
+This portfolio is built in Typescript using NextJS, and ChakraUI.  It fetches most of its data from a Headless CMS known as [Contentful](https://www.contentful.com/).  This project was built to be made into a template project that can allow Entry-Level Developers quickly and easily create their own dynamic portfolio.
 
-First, install your dependencies. (We are using Yarn as the package manager, so I suggest not using 'npm i')
+
+![Preview Screenshot](https://images.ctfassets.net/gpz0vzuizl3q/3KMLUQQBvb2XKBLivZ1RIS/65ced3e810d7d8655d37ced65e83e6b9/Screenshot_2022-06-21_at_13-07-34_Aiden_Smith.png?h=250)
+
+
+## Local Setup
+
+Clone the project
+(I recommend using SSH)
 
 ```bash
-yarn
+# HTTPS
+  git clone https://github.com/Voxel20/portfolio-tsx.git
+
+# SSH
+  git@github.com:Voxel20/portfolio-tsx.git
 ```
 
-Secong, run the development server:
+Go to the project directory
 
 ```bash
-npm run dev
+  cd portfolio-tsx
+```
+
+Install dependencies
+(This project uses yarn as a package manager.  Avoid using npm)
+
+```bash
+  yarn
+```
+
+Start Dev Server
+
+```bash
+  yarn dev
+
 # or
-yarn dev
+
+  npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Documentation
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- [NextJS](https://nextjs.org/docs/getting-started)
+- [TypeScript](https://www.typescriptlang.org/docs/)
+- [ChakraUI](https://chakra-ui.com/)
+- [Contentful](https://www.contentful.com/developers/docs/)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Environment Variables
 
-## Learn More
+To run this project, you will need to add the following environment variables to your .env file
 
-To learn more about Next.js, take a look at the following resources:
+These values can also be located in .env.example
+```
+// Common
+NEXT_PUBLIC_URL=https://aidensmith.dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+// Contentful
+CONTENTFUL_ACCESS_TOKEN=
+CONTENTFUL_PREVIEW_ACCESS_TOKEN=
+CONTENTFUL_SPACE_ID=
+```
+## Author
+- [@Voxel20](https://www.github.com/voxel20)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are always welcome!  You can also create issues or PRs that I will individually review and add if beneficial.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)

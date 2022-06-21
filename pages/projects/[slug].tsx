@@ -1,17 +1,22 @@
 // @ts-nocheck
+import Container from '../../components/UI/Container';
+import Head from 'next/head';
+import Scroll from '../../components/Scroll';
 import {
-  ScaleFade,
+  Avatar,
+  Heading,
   Stack,
-  Tag,
-  TagLabel,
-  TagLeftIcon,
-  Image,
   Text,
-  Link,
+  Image,
+  Flex,
+  useColorMode,
   Divider,
   Box,
-  useColorMode
+  Tag,
+  TagLabel,
+  TagLeftIcon
 } from '@chakra-ui/react';
+import Link from 'next/link';
 import { FaExternalLinkAlt, FaGithub, FaReact } from 'react-icons/fa';
 import {
   SiTypescript,
@@ -34,18 +39,15 @@ import {
 } from 'react-icons/si';
 import { VscTerminalBash } from 'react-icons/vsc';
 import useMediaQuery from '../../hook/useMediaQuery';
+import { serialize } from 'next-mdx-remote/serialize';
+import { MDXRemote } from 'next-mdx-remote';
+import PostContainer from '../../components/Blog/PostContainer';
+import MDXComponents from '../../components/Blog/MDXComponents';
 
-export default function ProjectCard({
-  title,
-  description,
-  image,
-  githubLink,
-  deployLink,
-  tags,
-  slug
-}) {
-  const slugUrl = `/projects/${slug}`;
-
+function Project({ data, source }) {
+  const isLargerThan480 = useMediaQuery(480);
+  const isLargerThan800 = useMediaQuery(800);
+  const { colorMode } = useColorMode();
   const getTag = (tag) => {
     let values = [];
     switch (tag) {
@@ -193,12 +195,7 @@ export default function ProjectCard({
     }
     return values;
   };
-
-  const isLargerThan800 = useMediaQuery(800);
-  const isLargerThan480 = useMediaQuery(480);
-  const { colorMode } = useColorMode();
-
-  const Tags = tags.map((item) => (
+  const Tags = data.tags.map((item) => (
     <Tag
       key={item}
       colorScheme={getTag(item)[0]}
@@ -210,78 +207,86 @@ export default function ProjectCard({
   ));
 
   return (
-    <Stack
-      borderRadius={'10px'}
-      minH={'320px'}
-      maxH={'580px'}
-      border={'1px'}
-      borderColor={colorMode === 'light' ? 'gray.200' : 'gray.700'}
-    >
-      <ScaleFade in={true}>
-        {slug ? (
-          <center>
-            <Link href={slugUrl}>
-              <Image
-                width={1250}
-                height={600}
-                w="auto"
-                h="auto"
-                src={image}
-                transition="0.3s"
-                placeholder="blur"
-                borderRadius="10px 10px 0px 0px"
-                alt="project image"
-              ></Image>
-            </Link>
-          </center>
-        ) : (
-          <center>
-            <Image
-              width={1250}
-              height={600}
-              w="auto"
-              h="auto"
-              src={image}
-              transition="0.3s"
-              placeholder="blur"
-              borderRadius="10px 10px 0px 0px"
-              alt="project image"
-            ></Image>
-          </center>
-        )}
-        <Stack px={4} py={2}>
+    <>
+      <Container enableTransition={false}>
+        <Head>
+          <title>{data.title}</title>
+        </Head>
+        <Stack my="15vh" justifyContent="center" alignItems="center">
           <Stack
-            isInline
-            justifyContent={'space-between'}
-            alignItems={'center'}
+            w={['100vw', '95vw']}
+            maxW="680px"
+            p={['20px', '20px', '24px', '24px']}
           >
-            <Text fontFamily="Ubuntu" fontSize={'2xl'}>
-              {title}
-            </Text>
+            {/* <Heading fontSize={['3xl', '3xl', '5xl', '5xl']} alignSelf="center">
+              {data.title}
+            </Heading> */}
+
+            {/* <Stack
+              py={4}
+              direction={{ base: 'column', md: 'row' }}
+              alignItems="baseline"
+              justifyContent={'space-between'}
+            >
+              <Stack isInline alignItems={'center'}>
+                <Avatar
+                  name="Voxel20"
+                  size="xs"
+                  src="https://avatars.githubusercontent.com/u/29802327?v=4"
+                  zIndex={-1}
+                />
+                <Text fontSize={['xs', 'xs', 'sm', 'sm']}>
+                  Created by{' '}
+                  <Link href="/github" isExternal>
+                    Voxel20
+                  </Link>
+                </Text>
+              </Stack>
+            </Stack> */}
+            <Stack
+              borderRadius={'10px'}
+              minH="200px"
+              border="1px"
+              borderColor={colorMode === 'light' ? 'gray.200' : 'gray.700'}
+            >
+              <Image
+                src={'https:' + data.image.fields.file.url}
+                borderRadius="10px"
+                maxWidth={'100%'}
+                maxHeight={'100%'}
+                placeholder="blur"
+                w="auto"
+                mx="auto"
+                alt="Project Image"
+              ></Image>
+            </Stack>
             <Stack
               isInline
-              justifyContent={'flex-end'}
+              justifyContent={'center'}
               alignItems={'center'}
-              spacing={4}
+              spacing={6}
             >
-              {githubLink ? (
+              <Heading fontSize={['2xl', '2xl', '3xl', '3xl']}>
+                {data.title}
+              </Heading>
+              {data.githubLink ? (
                 <Link
-                  href={githubLink}
+                  href={data.githubLink}
                   color={colorMode === 'light' ? 'black' : 'white'}
                   isExternal
                 >
-                  <FaGithub size={23} />
+                  <FaGithub size={25} />
                 </Link>
               ) : (
                 <div />
               )}
-              {deployLink ? (
+              {data.deployLink ? (
                 <Link
-                  href={deployLink}
+                  href={data.deployLink}
                   color={colorMode === 'light' ? 'black' : 'white'}
                   isExternal
                 >
-                  <FaExternalLinkAlt size={23} />
+                  <FaExternalLinkAlt size={25} />
                 </Link>
               ) : (
                 <div />
@@ -296,9 +301,59 @@ export default function ProjectCard({
             </Stack>
           )}
           <Divider />
-          <Text fontSize={['sm', 'md']}>{description}</Text>
+          {colorMode === 'light' ? (
+            <>
+              <PostContainer.light>
+                <MDXRemote {...source} components={MDXComponents} />
+              </PostContainer.light>
+            </>
+          ) : (
+            <>
+              <PostContainer.dark>
+                <MDXRemote {...source} components={MDXComponents} />
+              </PostContainer.dark>
+            </>
+          )}
         </Stack>
-      </ScaleFade>
-    </Stack>
+      </Container>
+      <Scroll />
+    </>
   );
 }
+
+let client = require('contentful').createClient({
+  space: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+});
+
+export async function getStaticPaths() {
+  let data = await client.getEntries({
+    content_type: 'projects'
+  });
+  return {
+    paths: data.items.map((item) => ({
+      params: { slug: item.fields.slug }
+    })),
+    fallback: false
+  };
+}
+
+export async function getStaticProps({ params }) {
+  let data = await client.getEntries({
+    content_type: 'projects',
+    'fields.slug': params.slug
+  });
+
+  const article = data.items[0].fields;
+  const source = article.longDescription;
+  const mdxSource = await serialize(source);
+
+  return {
+    props: {
+      data: article,
+      source: mdxSource
+    }
+  };
+}
+
+export default Project;

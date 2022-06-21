@@ -15,6 +15,7 @@ import { useState } from 'react';
 import Scroll from '../../components/Scroll';
 import Container from '../../components/UI/Container';
 import ProjectCard from '../../components/UI/ProjectCard';
+import Link from 'next/link';
 
 function ProjectPage({ projects }) {
   const [query, setQuery] = useState('');
@@ -42,6 +43,7 @@ function ProjectPage({ projects }) {
             <Divider />
             <Stack maxW={700} spacing={5} alignSelf="center">
               <ProjectCard
+                slug={'TabletopNerds'}
                 title={'Tabletop Nerds'}
                 description={
                   'Tabletop-Nerds is a Laravel based Full Stack project built with massive ammounts of interactivity.  Built amongst a small team of 4 developers, this project utilizes several important coding practices and technologies.  Functionality between the Front-End/Back-End being seamless & efficient.'
@@ -75,6 +77,7 @@ function ProjectPage({ projects }) {
               )
               .map((project) => (
                 <ProjectCard
+                  slug={project.fields.slug}
                   key={project.fields.title}
                   title={project.fields.title}
                   description={project.fields.description}
@@ -94,6 +97,7 @@ function ProjectPage({ projects }) {
             This is the very first project I worked on in 2012. theRandomizr.
           </Text>
           <ProjectCard
+            slug={'theRandomizr'}
             title={'theRandomizr'}
             description={
               'A randomization website I built in 2012 to help my brothers and I decide on a movie to watch.  It did this using an unordered list & some vanilla JavaScript.  This was the project my father used in order to introduce me to the field of Web Development.'
