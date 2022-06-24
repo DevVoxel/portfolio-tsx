@@ -76,3 +76,13 @@ Contributions are always welcome!  You can also create issues or PRs that I will
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## Upcoming Updates
+
+#### The Workshop
+
+The workshop portion of this project will be built to house small cards or icons of all my components, websites, creations, small ideas, apps, etc.  There will be a navigation scroll at the top that will allow any user to sort the entries via Technology/Framework/Language.  There may also be a tyoe to search section, but that is still up for debate.  The search at the top will consistently slowly scroll right, and when you hover or click on an icon for a technology, that icon will glow with a cyan hue around it and enlarge a little increasing the margin/padding.  Then the projects that have that specific tag will be shown.  This workshop will be a small button to the right of the website logo in an attempt to make a minimal UI impact on the overall website.  
+
+#### Freelance
+
+The freelance section of this website will be used to house all my freelance services, and contracts.  I will use this to showcase a step by step easy process for clients to take me (or anyone using this template) on under contract.  This includes what is wanted to be built, the framework/technologies to be used, a custom task list, payout, quotas, contact information, base contracts, and other features to showcase freelance work effortlessly.
