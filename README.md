@@ -86,3 +86,11 @@ The workshop portion of this project will be built to house small cards or icons
 #### Freelance
 
 The freelance section of this website will be used to house all my freelance services, and contracts.  I will use this to showcase a step by step easy process for clients to take me (or anyone using this template) on under contract.  This includes what is wanted to be built, the framework/technologies to be used, a custom task list, payout, quotas, contact information, base contracts, and other features to showcase freelance work effortlessly.
+
+#### Backlog
+
+The backlog will be used as well... a backlog.  Showcasing my Trello entries, as well as projects that I want to work on in the future.  This section will have resources towards each project and will look similar to a Github commit history page (I assume).  Changes are up for debate, but also this is just a simple section to show my progress as well as ideas.
+
+#### Resume
+
+I need to add a section that will showcase my resume and skills.  This section will give a download option for a pdf version of my resume, as well as a cleanly designed page towards my direct resume.  Fairly simple section, just is needed with some further updates.
