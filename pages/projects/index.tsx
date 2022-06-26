@@ -97,7 +97,6 @@ function ProjectPage({ projects }) {
             This is the very first project I worked on in 2012. theRandomizr.
           </Text>
           <ProjectCard
-            slug={'theRandomizr'}
             title={'theRandomizr'}
             description={
               'A randomization website I built in 2012 to help my brothers and I decide on a movie to watch.  It did this using an unordered list & some vanilla JavaScript.  This was the project my father used in order to introduce me to the field of Web Development.'
