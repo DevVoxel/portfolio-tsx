@@ -31,12 +31,13 @@ import {
   VStack,
   Text,
   SimpleGrid,
-  ModalFooter
+  ModalFooter,
+  HStack
 } from '@chakra-ui/react';
-import NextLink from 'next/link';
+import Link from 'next/link';
 import useMediaQuery from '../../hook/useMediaQuery';
 import { AiOutlineMenu } from 'react-icons/ai';
-import { BsMoonFill, BsFillSunFill } from 'react-icons/bs';
+import { BsMoonFill, BsFillSunFill, BsGearFill } from 'react-icons/bs';
 
 export default function Navbar({ enableTransition }) {
   const isLargerThan768 = useMediaQuery(768);
@@ -78,23 +79,29 @@ export default function Navbar({ enableTransition }) {
           </DrawerHeader>
           <DrawerBody>
             <Stack spacing="24px">
-              <NextLink href="/" passHref>
+              <Link href="/" passHref>
                 <Button as="a" variant="ghost" fontSize="16px">
                   Home
                 </Button>
-              </NextLink>
-              <NextLink href="/projects" passHref>
+              </Link>
+              <Link href="/projects" passHref>
                 <Button as="a" variant="ghost" fontSize="16px">
                   Projects
                 </Button>
-              </NextLink>
-              <NextLink href="/blog" passHref>
+              </Link>
+              <Link href="/blog" passHref>
                 <Button as="a" variant="ghost" fontSize="16px">
                   Blog
                 </Button>
-              </NextLink>
+              </Link>
             </Stack>
           </DrawerBody>
+          <Link href="/workshop" passHref>
+            <Button as="a" variant={'ghost'} fontSize={'16px'} mb={15}>
+              <BsGearFill />
+              Workshop
+            </Button>
+          </Link>
         </DrawerContent>
       </Drawer>
     </>
@@ -122,7 +129,7 @@ export default function Navbar({ enableTransition }) {
           borderBottom={'1px'}
           borderColor={colorMode === 'light' ? 'gray.200' : 'gray.700'}
         >
-          <NextLink href="/" passHref>
+          <Link href="/" passHref>
             <Image
               borderTop={'4vw'}
               borderRadius="10px"
@@ -135,46 +142,59 @@ export default function Navbar({ enableTransition }) {
               }
               alt={'Voxel20'}
             />
-          </NextLink>
+          </Link>
           {isLargerThan768 ? (
-            <Center>
-              <NextLink href={'/'} passHref>
-                <Button as="a" variant={'ghost'} p="4" fontSize={'16px'}>
-                  Home
-                </Button>
-              </NextLink>
-              <NextLink href={'/projects'} passHref>
+            <>
+              <Center>
+                <Link href={'/'} passHref>
+                  <Button as="a" variant={'ghost'} p="4" fontSize={'16px'}>
+                    Home
+                  </Button>
+                </Link>
+                <Link href={'/projects'} passHref>
+                  <Button
+                    as="a"
+                    variant={'ghost'}
+                    p="4"
+                    ml="3vw"
+                    fontSize={'16px'}
+                  >
+                    Projects
+                  </Button>
+                </Link>
+                <Link href={'/blog'} passHref>
+                  <Button
+                    as="a"
+                    variant={'ghost'}
+                    p="4"
+                    ml="3vw"
+                    fontSize={'16px'}
+                  >
+                    Blog
+                  </Button>
+                </Link>
+                <Link href={'/workshop'} passHref>
+                  <Button
+                    as="a"
+                    variant={'ghost'}
+                    p="4"
+                    ml="3vw"
+                    fontSize={'16px'}
+                  >
+                    Workshop
+                  </Button>
+                </Link>
                 <Button
-                  as="a"
-                  variant={'ghost'}
+                  variant="ghost"
                   p="4"
                   ml="3vw"
                   fontSize={'16px'}
+                  onClick={toggleColorMode}
                 >
-                  Projects
+                  {colorMode === 'dark' ? <BsMoonFill /> : <BsFillSunFill />}
                 </Button>
-              </NextLink>
-              <NextLink href={'/blog'} passHref>
-                <Button
-                  as="a"
-                  variant={'ghost'}
-                  p="4"
-                  ml="3vw"
-                  fontSize={'16px'}
-                >
-                  Blog
-                </Button>
-              </NextLink>
-              <Button
-                variant="ghost"
-                p="4"
-                ml="3vw"
-                fontSize={'16px'}
-                onClick={toggleColorMode}
-              >
-                {colorMode === 'dark' ? <BsMoonFill /> : <BsFillSunFill />}
-              </Button>
-            </Center>
+              </Center>
+            </>
           ) : (
             <Center>
               <Button
