@@ -22,8 +22,8 @@ export default function Workshop() {
           <Text>
             This is a workshop page. I will be posting all common builds,
             components, small projects, and more here. A search function will be
-            added accordingly eventually. This inlcudes sorting by tag of each
-            iteration.
+            added accordingly eventually. This includes sorting by tag of each
+            project.
           </Text>
         </Stack>
       </Container>
