@@ -96,3 +96,4 @@ The backlog will be used as well... a backlog.  Showcasing my Trello entries, as
 I need to add a section that will showcase my resume and skills.  This section will give a download option for a pdf version of my resume, as well as a cleanly designed page towards my direct resume.  Fairly simple section, just is needed with some further updates.
 
 #### Contact Form
+Use Modal Popup for contact form instead of mailto.  Service needed to be used is yet to be determined.  However there should be ample options for visitors of site to send information to developer.
