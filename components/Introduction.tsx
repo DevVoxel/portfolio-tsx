@@ -68,7 +68,10 @@ export default function Introduction() {
             <Text fontSize="display3" color="#8F9094">
               💻 Working on projects to further my knowledge.
               <br />
-              🏳️‍🌈 Happy Pride Month!
+              💥 Revsite Domain Associate @
+              <Link href="https://www.revlocal.com" isExternal>
+                RevLocal!
+              </Link>
             </Text>
           </SlideFade>
 
