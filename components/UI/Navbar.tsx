@@ -71,8 +71,8 @@ export default function Navbar({ enableTransition }) {
               h="32px"
               src={
                 colorMode === 'light'
-                  ? 'https://images.ctfassets.net/gpz0vzuizl3q/6mmTyMbqxsT9nky5PM2FYY/1435ff9dd9abb16351405d57fb7b412d/JuneIconV2.gif?h=250'
-                  : 'https://images.ctfassets.net/gpz0vzuizl3q/6mmTyMbqxsT9nky5PM2FYY/1435ff9dd9abb16351405d57fb7b412d/JuneIconV2.gif?h=250'
+                  ? 'https://images.ctfassets.net/gpz0vzuizl3q/5QcaVF4CR3k8F6DX0BPpv/86393a3ea2649f795fde88327fd54772/Icon1.png?h=250'
+                  : 'https://images.ctfassets.net/gpz0vzuizl3q/3KH1z17kn9Xz3j0KWZ2ozT/9fe2f9bfdeb9165ded0a682fe7bf1f26/121212.png?h=250'
               }
               alt={'Voxel20'}
             />
@@ -137,8 +137,8 @@ export default function Navbar({ enableTransition }) {
               h={{ base: '32px', md: '46px' }}
               src={
                 colorMode === 'light'
-                  ? 'https://images.ctfassets.net/gpz0vzuizl3q/6mmTyMbqxsT9nky5PM2FYY/1435ff9dd9abb16351405d57fb7b412d/JuneIconV2.gif?h=250'
-                  : 'https://images.ctfassets.net/gpz0vzuizl3q/6mmTyMbqxsT9nky5PM2FYY/1435ff9dd9abb16351405d57fb7b412d/JuneIconV2.gif?h=250'
+                  ? 'https://images.ctfassets.net/gpz0vzuizl3q/5QcaVF4CR3k8F6DX0BPpv/86393a3ea2649f795fde88327fd54772/Icon1.png?h=250'
+                  : 'https://images.ctfassets.net/gpz0vzuizl3q/3KH1z17kn9Xz3j0KWZ2ozT/9fe2f9bfdeb9165ded0a682fe7bf1f26/121212.png?h=250'
               }
               alt={'Voxel20'}
             />
