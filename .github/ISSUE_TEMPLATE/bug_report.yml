@@ -20,17 +20,17 @@ body:
         What did you expect to happen?
     validations:
       required: true
-  - type: textarea
-    id: current
-    attributes:
-      label: Current Behavior
-      description: |
-        What actually happened?
+  # - type: textarea
+  #   id: current
+  #   attributes:
+  #     label: Current Behavior
+  #     description: |
+  #       What actually happened?
         
-        Please include full errors, uncaught exceptions, stack traces, and relevant logs.
-        If service responses are relevant, please include wire logs.
-    validations:
-      required: true
+  #       Please include full errors, uncaught exceptions, stack traces, and relevant logs.
+  #       If service responses are relevant, please include wire logs.
+  #   validations:
+  #     required: true
   - type: textarea
     id: reproduction
     attributes:
@@ -66,7 +66,7 @@ body:
       label: CDK CLI Version
       description: Output of `cdk version`
     validations:
-      required: true
+      required: false
 
   - type: input
     id: framework-version
@@ -96,10 +96,13 @@ body:
       multiple: true
       options:
         - Typescript
+        - JavaScript
+        - HTML5
+        - CSS3
         - Python
-        - .NET
-        - Java
+        - Rust
         - Go
+        - .NET
     validations:
       required: true
 
