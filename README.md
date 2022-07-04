@@ -98,4 +98,4 @@ I need to add a section that will showcase my resume and skills.  This section w
 #### Contact Form
 Use Modal Popup for contact form instead of mailto.  Service needed to be used is yet to be determined.  However there should be ample options for visitors of site to send information to developer.
 
-Currently this is being worked on with a base added. Being worked on under the feature/ContactForm branch.
+Currently this is being worked on with a base added. Being worked on under the feature/ContactForm branch.  Modal will be added next, as well as the validation enhancement.
