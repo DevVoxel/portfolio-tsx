@@ -72,9 +72,9 @@ CONTENTFUL_PREVIEW_ACCESS_TOKEN=
 CONTENTFUL_SPACE_ID=
 ```
 ## Deployment
-In order to deploy this project, it is easiest to try using a [Vercel Hobbyist](https://vercel.com/pricing) account.  This will give you access to Vercel technologies and easy deployment methods.  I personally recommend this if you 
-  1. Cannot afford a host.
-  or
+In order to deploy this project, it is easiest to try using a [Vercel Hobbyist](https://vercel.com/pricing) account.  This will give you access to Vercel technologies and easy deployment methods.  I personally recommend this if you:
+  1. Cannot afford a host
+  ///
   2. Just want easy & free hosting.
 Otherwise use what you want, there are production/deployment commands to support such.  It is reccomended to deploy on your 'main' branch, or a seperate 'deployment' branch.
 
