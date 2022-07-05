@@ -26,7 +26,7 @@ Go to the project directory
 ```
 
 Install dependencies
-(This project uses yarn as a package manager.  Avoid using npm)
+(This project uses yarn as a package manager.  Avoid using npm when installing to prevent possible dependency problems.)
 
 ```bash
   yarn
