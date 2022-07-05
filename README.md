@@ -55,7 +55,9 @@ Start Dev Server
 To run this project, you will need to add the following environment variables to your .env file. (If using Vercel. There is a script setup to pull enviroment variables in package.json)
 ```
   npm run env
+  
 # or
+
   vercel env pull
 ```
 
@@ -72,7 +74,7 @@ CONTENTFUL_SPACE_ID=
 ## Deployment
 In order to deploy this project, it is easiest to try using a [Vercel Hobbyist](https://vercel.com/pricing) account.  This will give you access to Vercel technologies and easy deployment methods.  I personally reccomend this if you 
   1. Cannot afford a host.
-# or
+  or
   2. Just want easy & free hosting.
 Otherwise use what you want, there are production/deployment commands to support such.  It is reccomended to deploy on your 'main' branch, or a seperate 'deployment' branch.
 
