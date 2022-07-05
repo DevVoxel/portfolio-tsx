@@ -6,6 +6,7 @@ import Contact from '../components/Contact';
 import Container from '../components/UI/Container';
 import Scroll from '../components/Scroll';
 import useMediaQuery from '../hook/useMediaQuery';
+import ContactRawForm from '../components/ContactRawForm';
 
 function IndexPage({}) {
   const isLargerThan800 = useMediaQuery(800);
@@ -29,6 +30,7 @@ function IndexPage({}) {
           <Introduction />
           <AboutMe />
           <Contact />
+          {/* <ContactRawForm /> */}
         </Stack>
       </Container>
       <Scroll />
