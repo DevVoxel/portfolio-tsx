@@ -113,6 +113,10 @@ The backlog will be used as well... a backlog.  Showcasing my Trello entries, as
 I need to add a section that will showcase my resume and skills.  This section will give a download option for a pdf version of my resume, as well as a cleanly designed page towards my direct resume.  Fairly simple section, just is needed with some further updates.
 
 #### Contact Form
-Use Modal Popup for contact form instead of mailto.  Service needed to be used is yet to be determined.  However there should be ample options for visitors of site to send information to developer.
+Use Modal Popup for contact form instead of mailto.  Service needed to be used is yet to be determined.  However there should be ample options for visitors of site to send information to developer. 
 
-Currently this is being worked on with a base added. Being worked on under the feature/ContactForm branch.  Modal will be added next, as well as the validation enhancement.
+--> Being worked on under the feature/ContactForm branch.  Modal will be added next, as well as the validation enhancement.
+
+#### Social Links Subdomain
+
+Create a subdomain of links.aidensmith.dev or social.aidensmith.dev and make it an adaptive link-in-bio style list.  An example of one of these is LinkTree or Cardd.
