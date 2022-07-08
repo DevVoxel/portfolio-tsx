@@ -30,7 +30,6 @@ function IndexPage({}) {
           <Introduction />
           <AboutMe />
           <Contact />
-          {/* <ContactRawForm /> */}
         </Stack>
       </Container>
       <Scroll />
