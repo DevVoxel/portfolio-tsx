@@ -9,57 +9,57 @@ const nextConfig = {
   reactStrictMode: true,
 
   api: {
-    bodyParser: false,
+    bodyParser: false
   },
 
   async redirects() {
     return [
       {
-        source: "/github",
-        destination: "https://github.com/Voxel20",
-        permanent: true,
+        source: '/github',
+        destination: 'https://github.com/Voxel20',
+        permanent: true
       },
       {
-        source: "/twitter",
-        destination: "https://twitter.com/DevVoxel",
-        permanent: true,
+        source: '/twitter',
+        destination: 'https://twitter.com/DevVoxel',
+        permanent: true
       },
       {
-        source: "/discord",
-        destination: "https://discordapp.com/users/153258046171119616/",
-        permanent: true,
+        source: '/discord',
+        destination: 'https://discordapp.com/users/153258046171119616/',
+        permanent: true
       },
       {
-        source: "/twitch",
-        destination: "https://twitch.tv/Mealtimez",
-        permanent: true,
+        source: '/twitch',
+        destination: 'https://twitch.tv/Mealtimez',
+        permanent: true
       },
       {
-        source: "/mail",
-        destination: "mailto:aidensmith20@gmail.com",
-        permanent: true,
+        source: '/mail',
+        destination: 'mailto:aidensmith20@gmail.com',
+        permanent: true
       },
       {
-        source: "/donate",
-        destination: "https://ko-fi.com/voxel20",
-        permanent: true,
+        source: '/donate',
+        destination: 'https://ko-fi.com/voxel20',
+        permanent: true
       },
       {
-        source: "/linkedin",
-        destination: "https://www.linkedin.com/in/aidensmithdev/",
-        permanent: true,
+        source: '/linkedin',
+        destination: 'https://www.linkedin.com/in/aidensmithdev/',
+        permanent: true
       },
       {
-        source: "/stackoverflow",
-        destination: "https://stackoverflow.com/users/13132838/aiden-s",
-        permanent: true,
-      },
+        source: '/stackoverflow',
+        destination: 'https://stackoverflow.com/users/13132838/aiden-s',
+        permanent: true
+      }
     ];
   },
 
   images: {
-    domains: ["i.imgur.com", "images.ctfassets.net"],
-  },
+    domains: ['i.imgur.com', 'images.ctfassets.net']
+  }
 };
 
 module.exports = nextConfig;
