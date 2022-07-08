@@ -16,6 +16,7 @@ import {
 } from 'react-icons/fa';
 import SlideUpWhenVisible from '../hook/slideUpWhenVisible';
 import useMediaQuery from '../hook/useMediaQuery';
+import ContactRawForm from './ContactRawForm';
 
 export default function Contact() {
   const { colorMode } = useColorMode();
@@ -64,7 +65,7 @@ export default function Contact() {
               <Link href="/github" isExternal>
                 <Button
                   leftIcon={<FaGithub />}
-                  position="static"
+                  position="relative"
                   size={isLargerThan800 ? 'md' : 'sm'}
                 >
                   GitHub
@@ -73,21 +74,13 @@ export default function Contact() {
               <Link href="/linkedin" isExternal>
                 <Button
                   leftIcon={<FaLinkedin />}
-                  position="static"
+                  position="relative"
                   size={isLargerThan800 ? 'md' : 'sm'}
                 >
                   LinkedIn
                 </Button>
               </Link>
-              <Link href="/mail">
-                <Button
-                  leftIcon={<FaEnvelope />}
-                  position="static"
-                  size={isLargerThan800 ? 'md' : 'sm'}
-                >
-                  Email
-                </Button>
-              </Link>
+              <ContactRawForm />
             </Stack>
           </SlideUpWhenVisible>
           <SlideUpWhenVisible threshold={undefined}>
@@ -95,7 +88,7 @@ export default function Contact() {
               <Link href="/discord" isExternal>
                 <Button
                   leftIcon={<FaDiscord />}
-                  position="static"
+                  position="relative"
                   size={isLargerThan800 ? 'md' : 'sm'}
                 >
                   Discord
@@ -104,7 +97,7 @@ export default function Contact() {
               <Link href="/twitter" isExternal>
                 <Button
                   leftIcon={<FaTwitter />}
-                  position="static"
+                  position="relative"
                   size={isLargerThan800 ? 'md' : 'sm'}
                 >
                   Twitter
