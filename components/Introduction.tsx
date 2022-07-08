@@ -15,6 +15,7 @@ import { type ButtonProps } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaDiscord, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import useMediaQuery from '../hook/useMediaQuery';
+import ContactRawForm from '../components/ContactRawForm';
 
 export const MotionButton = motion<ButtonProps>(Button);
 
@@ -85,7 +86,7 @@ export default function Introduction() {
                   <Button
                     leftIcon={<FaGithub />}
                     transition="0.3s"
-                    position="static"
+                    position="relative"
                     size={isLargerThan800 ? 'md' : 'sm'}
                   >
                     GitHub
@@ -94,22 +95,13 @@ export default function Introduction() {
                 <Link href="/linkedin" isExternal>
                   <Button
                     leftIcon={<FaLinkedin />}
-                    position="static"
+                    position="relative"
                     size={isLargerThan800 ? 'md' : 'sm'}
                   >
                     LinkedIn
                   </Button>
                 </Link>
-                <Link href="/mail">
-                  <Button
-                    leftIcon={<FaEnvelope />}
-                    transition="0.3s"
-                    position="static"
-                    size={isLargerThan800 ? 'md' : 'sm'}
-                  >
-                    Email
-                  </Button>
-                </Link>
+                <ContactRawForm />
               </Stack>
             ) : (
               <Box>
@@ -117,7 +109,7 @@ export default function Introduction() {
                   <Button
                     leftIcon={<FaGithub />}
                     transition="0.3s"
-                    position="static"
+                    position="relative"
                     size={isLargerThan800 ? 'md' : 'sm'}
                     mr={2}
                     mb={2}
@@ -128,7 +120,7 @@ export default function Introduction() {
                 <Link href="/linkedin" isExternal>
                   <Button
                     leftIcon={<FaLinkedin />}
-                    position="static"
+                    position="relative"
                     size={isLargerThan800 ? 'md' : 'sm'}
                     mr={2}
                     mb={2}
@@ -136,18 +128,7 @@ export default function Introduction() {
                     LinkedIn
                   </Button>
                 </Link>
-                <Link href="/mail">
-                  <Button
-                    leftIcon={<FaEnvelope />}
-                    transition="0.3s"
-                    position="static"
-                    size={isLargerThan800 ? 'md' : 'sm'}
-                    mr={2}
-                    mb={2}
-                  >
-                    Email
-                  </Button>
-                </Link>
+                <ContactRawForm />
               </Box>
             )}
           </SlideFade>
