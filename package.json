@@ -48,10 +48,11 @@
     "react-icons": "^4.4.0",
     "react-intersection-observer": "^9.2.2",
     "reading-time": "^1.5.0",
-    "vercel": "^24.2.4",
+    "vercel": "^19.1.2",
     "webpack": "^5.73.0"
   },
   "devDependencies": {
+    "@sendgrid/mail": "^7.7.0",
     "@types/cookie-parser": "^1.4.3",
     "@types/cookies": "^0.7.7",
     "@types/dateformat": "^5.0.0",
