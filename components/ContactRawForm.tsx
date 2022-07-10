@@ -26,9 +26,14 @@ import { useColorMode } from '@chakra-ui/react';
 import { Form, Field, useField } from 'react-final-form';
 import validate from './Validate';
 import { FaEnvelope } from 'react-icons/fa';
+import { useState } from 'react';
 
 const onSubmit = async (values) => {
   console.log(values);
+  fetch('/api/contact', {
+    method: 'post',
+    body: JSON.stringify(values)
+  });
 };
 
 export default function ContactRawForm() {
@@ -40,6 +45,10 @@ export default function ContactRawForm() {
   const [scrollBehavior] = React.useState('inside');
 
   const btnRef = React.useRef(null);
+  // const [fullName, setName] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [message, setMessage] = useState('');
+
   return (
     <>
       <Button
@@ -125,16 +134,16 @@ export default function ContactRawForm() {
                     <br />
                     <br />
                     {/* <Box
-                        as="pre"
-                        style={{
-                          wordBreak: 'break-all',
-                          width: '100%',
-                          overflow: 'auto'
-                        }}
-                        my={10}
-                      >
-                        {JSON.stringify(values, 0, 2)}
-                      </Box> */}
+                      as="pre"
+                      style={{
+                        wordBreak: 'break-all',
+                        width: '100%',
+                        overflow: 'auto'
+                      }}
+                      my={10}
+                    >
+                      {JSON.stringify(values, 0, 2)}
+                    </Box> */}
                     <Box spacing={5} display="flex" justifyContent="center">
                       <Link href="/github" isExternal>
                         <Button
