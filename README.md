@@ -49,6 +49,7 @@ Start Dev Server
 - [TypeScript](https://www.typescriptlang.org/docs/)
 - [ChakraUI](https://chakra-ui.com/)
 - [Contentful](https://www.contentful.com/developers/docs/)
+- [SendGrid](https://docs.sendgrid.com/)
 
 ## Environment Variables
 
@@ -116,9 +117,13 @@ I need to add a section that will showcase my resume and skills.  This section w
 Use Modal Popup for contact form instead of mailto.  However there should be ample options for visitors of site to send information to developer. 
 
 --> Being worked on under the feature/ContactForm branch.
+
 --> Modal has been added, the validation enhancement comes next.
---> Currently using SendGrid email API.  Might switch to something else but for now it works.  
-    -> All emails currently go to your 'spam' folder.
+
+--> Currently using SendGrid email API.  Might switch to something else but for now it works. 
+
+--> All emails currently go to your 'spam' folder.
+    
 --> Might adjust modal dialog on mobile to disable the close button.
 
 #### Social Links Subdomain
