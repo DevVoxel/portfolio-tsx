@@ -71,6 +71,9 @@ NEXT_PUBLIC_URL=https://aidensmith.dev
 CONTENTFUL_ACCESS_TOKEN=
 CONTENTFUL_PREVIEW_ACCESS_TOKEN=
 CONTENTFUL_SPACE_ID=
+
+// SendGrid
+SENDGRID_API_KEY=
 ```
 ## Deployment
 In order to deploy this project, it is easiest to try using a [Vercel Hobbyist](https://vercel.com/pricing) account.  This will give you access to Vercel technologies and easy deployment methods.  I personally recommend this if you:
