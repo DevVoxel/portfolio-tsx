@@ -49,6 +49,7 @@ Start Dev Server
 - [TypeScript](https://www.typescriptlang.org/docs/)
 - [ChakraUI](https://chakra-ui.com/)
 - [Contentful](https://www.contentful.com/developers/docs/)
+- [SendGrid](https://docs.sendgrid.com/)
 
 ## Environment Variables
 
@@ -70,6 +71,9 @@ NEXT_PUBLIC_URL=https://aidensmith.dev
 CONTENTFUL_ACCESS_TOKEN=
 CONTENTFUL_PREVIEW_ACCESS_TOKEN=
 CONTENTFUL_SPACE_ID=
+
+// SendGrid
+SENDGRID_API_KEY=
 ```
 ## Deployment
 In order to deploy this project, it is easiest to try using a [Vercel Hobbyist](https://vercel.com/pricing) account.  This will give you access to Vercel technologies and easy deployment methods.  I personally recommend this if you:
@@ -113,9 +117,17 @@ The backlog will be used as well... a backlog.  Showcasing my Trello entries, as
 I need to add a section that will showcase my resume and skills.  This section will give a download option for a pdf version of my resume, as well as a cleanly designed page towards my direct resume.  Fairly simple section, just is needed with some further updates.
 
 #### Contact Form
-Use Modal Popup for contact form instead of mailto.  Service needed to be used is yet to be determined.  However there should be ample options for visitors of site to send information to developer. 
+Use Modal Popup for contact form instead of mailto.  However there should be ample options for visitors of site to send information to developer. 
 
---> Being worked on under the feature/ContactForm branch.  Modal will be added next, as well as the validation enhancement.
+--> Being worked on under the feature/ContactForm branch.
+
+--> Modal has been added, the validation enhancement comes next.
+
+--> Currently using SendGrid email API.  Might switch to something else but for now it works. 
+
+--> All emails currently go to your 'spam' folder.
+    
+--> Might adjust modal dialog on mobile to disable the close button.
 
 #### Social Links Subdomain
 
