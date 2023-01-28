@@ -129,6 +129,8 @@ Use Modal Popup for contact form instead of mailto.  However there should be amp
     
 --> Might adjust modal dialog on mobile to disable the close button.
 
+--> API sends messages properly, however future format changes may need to be made.
+
 #### Social Links Subdomain
 
 Create a subdomain of links.aidensmith.dev or social.aidensmith.dev and make it an adaptive link-in-bio style list.  An example of one of these is LinkTree or Cardd.
