@@ -38,3 +38,5 @@ function IndexPage({}) {
 }
 
 export default IndexPage;
+
+// Psst.. If you enable light mode, look in the console. >:)
