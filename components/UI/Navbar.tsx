@@ -41,6 +41,11 @@ import { BsMoonFill, BsFillSunFill, BsGearFill } from 'react-icons/bs';
 
 export default function Navbar({ enableTransition }) {
   const isLargerThan768 = useMediaQuery(768);
+  function flashbang() {
+    console.log(
+      "Light Mode is like a flashbang, it blinds you and then you're dead."
+    );
+  }
   const {
     isOpen: isOpenDrawer,
     onOpen: onOpenDrawer,
@@ -89,19 +94,19 @@ export default function Navbar({ enableTransition }) {
                   Projects
                 </Button>
               </Link>
-              <Link href="/blog" passHref>
+              {/* <Link href="/blog" passHref>
                 <Button as="a" variant="ghost" fontSize="16px">
                   Blog
                 </Button>
-              </Link>
+              </Link> */}
             </Stack>
           </DrawerBody>
-          <Link href="/workshop" passHref>
+          {/* <Link href="/workshop" passHref>
             <Button as="a" variant={'ghost'} fontSize={'16px'} mb={15}>
               <BsGearFill />
               Workshop
             </Button>
-          </Link>
+          </Link> */}
         </DrawerContent>
       </Drawer>
     </>
@@ -162,7 +167,7 @@ export default function Navbar({ enableTransition }) {
                     Projects
                   </Button>
                 </Link>
-                <Link href={'/blog'} passHref>
+                {/* <Link href={'/blog'} passHref>
                   <Button
                     as="a"
                     variant={'ghost'}
@@ -183,13 +188,16 @@ export default function Navbar({ enableTransition }) {
                   >
                     Workshop
                   </Button>
-                </Link>
+                </Link> */}
                 <Button
                   variant="ghost"
                   p="4"
                   ml="3vw"
                   fontSize={'16px'}
-                  onClick={toggleColorMode}
+                  onClick={() => {
+                    toggleColorMode();
+                    flashbang();
+                  }}
                 >
                   {colorMode === 'dark' ? <BsMoonFill /> : <BsFillSunFill />}
                 </Button>
