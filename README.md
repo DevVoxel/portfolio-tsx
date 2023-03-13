@@ -13,10 +13,10 @@ Clone the project
 
 ```bash
 # HTTPS
-  git clone https://github.com/Voxel20/portfolio-tsx.git
+  git clone https://github.com/DevVoxel/portfolio-tsx.git
 
 # SSH
-  git@github.com:Voxel20/portfolio-tsx.git
+  git@github.com:DevVoxel/portfolio-tsx.git
 ```
 
 Go to the project directory
