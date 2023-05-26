@@ -16,7 +16,7 @@ const nextConfig = {
     return [
       {
         source: '/github',
-        destination: 'https://github.com/Voxel20',
+        destination: 'https://github.com/DevVoxel',
         permanent: true
       },
       {
@@ -41,7 +41,7 @@ const nextConfig = {
       },
       {
         source: '/donate',
-        destination: 'https://ko-fi.com/voxel20',
+        destination: 'https://ko-fi.com/DevVoxel',
         permanent: true
       },
       {
