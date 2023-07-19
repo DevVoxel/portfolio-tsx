@@ -69,7 +69,7 @@ export default function Introduction() {
             <Text fontSize="display3" color="#8F9094">
               💻 Working on projects to further my knowledge.
               <br />
-              💥 Revsite Domain Associate @
+              💥 Website Associate @
               <Link href="https://www.revlocal.com" isExternal>
                 RevLocal!
               </Link>
