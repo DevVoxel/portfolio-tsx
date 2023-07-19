@@ -43,7 +43,7 @@ function Post({ data, source }) {
             >
               <Stack isInline alignItems={'center'}>
                 <Avatar
-                  name="Voxel20"
+                  name="DevVoxel"
                   size="xs"
                   src="https://avatars.githubusercontent.com/u/29802327?v=4"
                   zIndex={-1}
