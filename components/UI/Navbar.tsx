@@ -167,7 +167,7 @@ export default function Navbar({ enableTransition }) {
                     Projects
                   </Button>
                 </Link>
-                {/* <Link href={'/blog'} passHref>
+                <Link href={'/blog'} passHref>
                   <Button
                     as="a"
                     variant={'ghost'}
@@ -178,6 +178,8 @@ export default function Navbar({ enableTransition }) {
                     Blog
                   </Button>
                 </Link>
+
+                {/*
                 <Link href={'/workshop'} passHref>
                   <Button
                     as="a"
