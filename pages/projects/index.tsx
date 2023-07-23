@@ -38,7 +38,7 @@ function ProjectPage({ projects }) {
             {' '}
             <Heading fontSize={{ base: '4xl', md: '6xl' }}>Projects</Heading>
             <Text fontSize={{ base: '14px', md: '16px' }}>
-              A list of projects I have created or worked on.
+              A list of a couple projects I have created or worked on.
             </Text>
             <Divider />
             <Stack maxW={700} spacing={5} alignSelf="center">

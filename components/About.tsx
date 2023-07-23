@@ -107,9 +107,9 @@ export default function AboutMe() {
                 <br />
                 <br /> */}
               When I&apos;m not working, I enjoy riding motorcycles, or playing
-              video games/watching anime with my friends! I also enjoy learning
+              video games with my friends! I also enjoy learning
               new things, and I am always looking to learn more about new &amp;
-              upcoming technologies.
+              upcoming technologies.  Recently I had the chance to work on AI programs to further my knowledge in the field of AI and increase the productivity of users within my company.
             </Text>
           </Stack>
         </SlideUpWhenVisible>
